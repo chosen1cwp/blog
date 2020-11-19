@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<title>Chosen1cwp's Blog/posts/accident_insurance/</title>
+<meta content="chosen1cwp 的个人博客" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="all,follow" name="robots"/>
+<meta content="index,follow,snippet,archive" name="googlebot"/>
+<link href="http://blog.chosen1cwp.com/hugo-theme-console/css/terminal-0.7.1.min.css" rel="stylesheet"/>
+<link href="http://blog.chosen1cwp.com/hugo-theme-console/css/animate-3.7.2.min.css" rel="stylesheet"/>
+<link href="http://blog.chosen1cwp.com/hugo-theme-console/css/console.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+<meta content="Accident_insurance" property="og:title"/>
+<meta content="chosen1cwp 的个人博客" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="http://blog.chosen1cwp.com/posts/accident_insurance/" property="og:url"/><meta content="2020-11-19T17:01:54+08:00" property="article:published_time"/>
+<meta content="Accident_insurance" name="twitter:title"/>
+<meta content="该文章已加密，请输入读取码验证" name="twitter:description"/>
+</head>
+<body class="terminal">
+<div class="container">
+<div class="terminal-nav">
+<header class="terminal-logo">
+<div class="logo terminal-prompt">
+<a class="no-style site-name" href="http://blog.chosen1cwp.com/">Chosen1cwp's Blog</a>:~# 
+              <a href="http://blog.chosen1cwp.com/posts">posts</a>/<a href="http://blog.chosen1cwp.com/posts/accident_insurance">accident_insurance</a>/</div></header>
+<nav class="terminal-menu">
+<ul typeof="BreadcrumbList" vocab="https://schema.org/">
+<li><a href="http://blog.chosen1cwp.com/about/" typeof="ListItem">about/</a></li>
+<li><a href="http://blog.chosen1cwp.com/posts/" typeof="ListItem">posts/</a></li>
+<li><a href="http://blog.chosen1cwp.com/photos/" typeof="ListItem">photos/</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="container animated zoomIn fast">
+<h1>Accident_insurance</h1>
+
+Nov. 19, 2020
+
+
+<br/><br/>
+<p><strong>该文章已加密，请输入读取码验证</strong></p>
+<div class="hugo-encryptor-container">
+<div class="hugo-encryptor-prompt">
+<p>文章的部分内容被密码保护：</p>
+</div>
+<div class="hugo-encryptor-form">
+<input class="hugo-encryptor-input" placeholder="请输入密码"/>
+<input class="hugo-encryptor-button" onclick="_click_handler(this)" type="button" value="点击验证"/>
+</div>
+<div class="hugo-encryptor-cipher-text" style="display: none;">XdEmx1vvq8IgMVJNHTu9ClJY7/riL9k7EDUZoXmlHHzqceWaaTfpJxpXvSv/gkeE9EvJtYKLGoYFvmqy1AchMOe4HIBRRqOJo0Wi0ywv/juPLH3B4IykLR0NloC2okX1b0uHn5DCizHCa/JQN0XSEqqZYDm8R+j3pgIDO5Nfc6cgD/HWy8VM5K6yju9CMeDn33GZ7VWmxwr/XDOnI/yOCaqkNndSM8SMnE9v9KcK7IfpsHEJm4IZca5mLoGYAQcJC8k/rSgOa4ZNrILte7ylbyCNXMvqZ7tFn/YAgqJfL1N5Z349xoevvvik7ycotg+v85Du6h7fUsWVWsSw/x9Ey4f9R9f+NSpFfrZFMJ4Nw+uVOrDx+J8FSaKOxxHyInQFEUlMJzEBezf0Sm6pH6spRZoa/QIHwG6xi8yO7QX3wARc+QcCN1sJ6T1uLhBok87Ql11k8un1vHaDhEaCAHxENrg61li8ltyIrb5Fht145JcAipG0d48aJBa2KHri8zh+</div>
+</div>
+<div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo</a> with
+    <a href="https://github.com/mrmierzejewski/hugo-theme-console/">Console Theme</a>. 
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script><script>
+const _do_decrypt = function(encrypted, password) {
+  let key = CryptoJS.enc.Utf8.parse(password);
+  let iv = CryptoJS.enc.Utf8.parse(password.substr(16));
+
+  let decrypted_data = CryptoJS.AES.decrypt(encrypted, key, {
+    iv: iv,
+    mode: CryptoJS.mode.CBC,
+    padding: CryptoJS.pad.Pkcs7
+  });
+  return decrypted_data.toString(CryptoJS.enc.Utf8);
+};
+
+const _click_handler = function(element) {
+  let parent = element.parentNode.parentNode;
+  let encrypted = parent.querySelector(
+    ".hugo-encryptor-cipher-text").innerText;
+  let password = parent.querySelector(
+    ".hugo-encryptor-input").value;
+  password = CryptoJS.MD5(password).toString();
+
+  let index = -1;
+  let elements = document.querySelectorAll(
+    ".hugo-encryptor-container");
+  for (index = 0; index < elements.length; ++index) {
+    if (elements[index].isSameNode(parent)) {
+      break;
+    }
+  }
+
+  let decrypted = "";
+  try {
+    decrypted = _do_decrypt(encrypted, password);
+  } catch (err) {
+    console.error(err);
+    alert("Failed to decrypt.");
+    return;
+  }
+
+  if (!decrypted.includes("--- DON'T MODIFY THIS LINE ---")) {
+    alert("Incorrect password.");
+    return;
+  }
+
+  let storage = localStorage;
+
+  let key = location.pathname + ".password." + index;
+  storage.setItem(key, password);
+  parent.innerHTML = decrypted;
+}
+
+window.onload = () => {
+  let index = -1;
+  let elements = document.querySelectorAll(
+    ".hugo-encryptor-container");
+
+  while (1) {
+    ++index;
+
+    let key = location.pathname + ".password." + index;
+    let password = localStorage.getItem(key);
+
+    if (!password) {
+      break;
+
+    } else {
+      console.log("Found password for part " + index);
+
+      let parent = elements[index];
+      let encrypted = parent.querySelector(".hugo-encryptor-cipher-text").innerText;
+      let decrypted = _do_decrypt(encrypted, password);
+      elements[index].innerHTML = decrypted;
+    }
+  }
+};</script></body>
+</html>
