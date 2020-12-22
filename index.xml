@@ -7,18 +7,50 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>©2020 chosen1cwp.</copyright>
-    <lastBuildDate>Thu, 19 Nov 2020 17:01:54 +0800</lastBuildDate>
-    
-	<atom:link href="http://blog.chosen1cwp.com/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 21 Dec 2020 14:20:30 +0800</lastBuildDate><atom:link href="http://blog.chosen1cwp.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>培训功能需求文档</title>
+      <link>http://blog.chosen1cwp.com/posts/%E5%9F%B9%E8%AE%AD%E6%A8%A1%E5%9D%97%E6%96%87%E6%A1%A3/</link>
+      <pubDate>Mon, 21 Dec 2020 14:20:30 +0800</pubDate>
+      
+      <guid>http://blog.chosen1cwp.com/posts/%E5%9F%B9%E8%AE%AD%E6%A8%A1%E5%9D%97%E6%96%87%E6%A1%A3/</guid>
+      <description>版本记录 版本号 编辑方 提出方 修订时间 说明 V1.0 蔡文鹏 营销部 2020-12-09 初稿 1 前言 1.1 文档目的 记录需求变更，追踪最新业务需求，特编写此文档！ 本需求文档主要对《培</description>
+    </item>
     
     <item>
       <title>意外险</title>
       <link>http://blog.chosen1cwp.com/posts/accident_insurance/</link>
-      <pubDate>Thu, 19 Nov 2020 17:01:54 +0800</pubDate>
+      <pubDate>Sun, 20 Dec 2020 17:01:54 +0800</pubDate>
       
       <guid>http://blog.chosen1cwp.com/posts/accident_insurance/</guid>
-      <description>意外险 本周收到**保险APP的提示短信：您购买的意外险将于本月底到期，请提前投保续约！去年购买的意外险是：上海人寿的小蜜蜂全年综合意外保险，</description>
+      <description>意外险 本周收到**保险APP的提示短信：您购买的意外险将于本月底到期，请提前投保续约！ 去年配置的意外险是：上海人寿的小蜜蜂全年综合意外保险，</description>
+    </item>
+    
+    <item>
+      <title>工作之于人生</title>
+      <link>http://blog.chosen1cwp.com/posts/%E5%B7%A5%E4%BD%9C%E4%B9%8B%E4%BA%8E%E4%BA%BA%E7%94%9F/</link>
+      <pubDate>Fri, 18 Dec 2020 10:00:55 +0800</pubDate>
+      
+      <guid>http://blog.chosen1cwp.com/posts/%E5%B7%A5%E4%BD%9C%E4%B9%8B%E4%BA%8E%E4%BA%BA%E7%94%9F/</guid>
+      <description>失业难以避免，重构人生规划 =============== &amp;ldquo;工作对于人生至关重要。它提供了收入，身份和意义，失业的创伤仅次于亲人的死亡。&amp;rdquo; 我完全同</description>
+    </item>
+    
+    <item>
+      <title>Iphone12验机</title>
+      <link>http://blog.chosen1cwp.com/posts/iphone12%E9%AA%8C%E6%9C%BA/</link>
+      <pubDate>Tue, 15 Dec 2020 16:00:59 +0800</pubDate>
+      
+      <guid>http://blog.chosen1cwp.com/posts/iphone12%E9%AA%8C%E6%9C%BA/</guid>
+      <description>iPhone新机验机 收到新机后，不论是从什么渠道购买的，都要注意一些事项，保证自己的权益。 第一，签收拍照录像留证 收到快递后，不要立刻着急签收</description>
+    </item>
+    
+    <item>
+      <title>One_time_work</title>
+      <link>http://blog.chosen1cwp.com/posts/one_time_work/</link>
+      <pubDate>Fri, 27 Nov 2020 15:46:07 +0800</pubDate>
+      
+      <guid>http://blog.chosen1cwp.com/posts/one_time_work/</guid>
+      <description>一次性工作 出席见面，借来无恙！！！ bbb为啥 ffff ccc ddd fdfdf</description>
     </item>
     
     <item>
@@ -36,7 +68,7 @@
       <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>http://blog.chosen1cwp.com/photos/warsaw-poland/</guid>
-      <description>文化科学宫 &amp;gt; 是波兰华沙市中心一座著名的高层建筑。它的总高度为237米（778英尺），是波兰最高的建筑，欧盟第五高楼（包括塔尖），也是欧洲大陆</description>
+      <description>文化科学宫 是波兰华沙市中心一座著名的高层建筑。它的总高度为237米（778英尺），是波兰最高的建筑，欧盟第五高楼（包括塔尖），也是欧洲大陆最</description>
     </item>
     
     <item>
@@ -81,7 +113,7 @@
       <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>http://blog.chosen1cwp.com/photos/panaji-india-2/</guid>
-      <description>帕纳吉 &amp;gt; 原名潘吉姆，是印度果阿州首府和北果阿区总部。它位于Ilhas de Goa分区（taluka）的Mandovi河口岸边。潘吉姆是果阿最大的</description>
+      <description>帕纳吉 原名潘吉姆，是印度果阿州首府和北果阿区总部。它位于Ilhas de Goa分区（taluka）的Mandovi河口岸边。潘吉姆是果阿最大的城</description>
     </item>
     
     <item>
