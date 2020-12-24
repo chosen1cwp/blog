@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chosen1cwp&#39;s Blog/posts/auto.js实现android手机收取蚂蚁森林能量/</title>
+    <meta name="description" content="chosen1cwp 的个人博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="http://blog.chosen1cwp.com/hugo-theme-console/css/terminal-0.7.1.min.css">
+    <link rel="stylesheet" href="http://blog.chosen1cwp.com/hugo-theme-console/css/animate-3.7.2.min.css">
+    <link rel="stylesheet" href="http://blog.chosen1cwp.com/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="Auto.js实现自动收取蚂蚁森林能量" />
+<meta property="og:description" content="chosen1cwp 的个人博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.chosen1cwp.com/posts/auto.js%E5%AE%9E%E7%8E%B0android%E6%89%8B%E6%9C%BA%E6%94%B6%E5%8F%96%E8%9A%82%E8%9A%81%E6%A3%AE%E6%9E%97%E8%83%BD%E9%87%8F/" /><meta property="article:published_time" content="2020-12-23T14:35:58+08:00" />
+
+
+
+<meta name="twitter:title" content="Auto.js实现自动收取蚂蚁森林能量"/>
+<meta name="twitter:description" content="一 缘由 每天早晨被闹钟叫的个半醒状态，就开始机械般的眯眼打开zfbAPP，手动一个个点击能量球收集能量，也不知道图个啥，就是随了人性了！ 这怎么"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="http://blog.chosen1cwp.com/" class="no-style site-name">Chosen1cwp&#39;s Blog</a>:~# 
+              <a href='http://blog.chosen1cwp.com/posts'>posts</a>/<a href='http://blog.chosen1cwp.com/posts/auto.js%E5%AE%9E%E7%8E%B0android%E6%89%8B%E6%9C%BA%E6%94%B6%E5%8F%96%E8%9A%82%E8%9A%81%E6%A3%AE%E6%9E%97%E8%83%BD%E9%87%8F'>auto.js%E5%AE%9E%E7%8E%B0android%E6%89%8B%E6%9C%BA%E6%94%B6%E5%8F%96%E8%9A%82%E8%9A%81%E6%A3%AE%E6%9E%97%E8%83%BD%E9%87%8F</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="http://blog.chosen1cwp.com/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="http://blog.chosen1cwp.com/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="http://blog.chosen1cwp.com/photos/" typeof="ListItem">photos/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast">
+        
+<h1>Auto.js实现自动收取蚂蚁森林能量</h1>
+
+Dec. 23, 2020
+
+
+<br/><br/>
+<h2 id="一-缘由">一 缘由</h2>
+<p>每天早晨被闹钟叫的个半醒状态，就开始机械般的眯眼打开zfbAPP，手动一个个点击能量球收集能量，也不知道图个啥，就是随了人性了！</p>
+<p><img src="http://static.chosen1cwp.com/mayi.jpg?imageView2/2/w/500" alt="蚂蚁森林"></p>
+<p>这怎么能行，费时费力，主要是影响睡觉的连续性😴，天理不容啊！</p>
+<p>早早就听过网络中存在着自动收取能量的脚本，打开Chrome，一阵Google操作后，大概实现过程已了然于胸中。</p>
+<h2 id="二-autojs-概述">二 Auto.js 概述</h2>
+<p>Android系统的手机，可以借助anto.js这个软件实现自动收取蚂蚁森林能量功能，划重点：<!-- raw HTML omitted -->auto.js仅仅支持Android系统，iOS系统别妄想了！<!-- raw HTML omitted --></p>
+<p><a href="https://hyb1996.github.io/AutoJs-Docs/#/">Auto.js</a>是仅支持Android系统、无需root权限，通过运行JavaScript语言编写的js脚本来实现自动化的软件，是基于Android系统“无障碍服务”实现的。</p>
+<p>应用场景有哪些，简单地举几个例子，比如：</p>
+<ul>
+<li>自动签到考勤打卡</li>
+<li>刷各种软件账号流量，抖音账号模拟刷抖音</li>
+<li>自动签到领取京豆</li>
+<li>定时秒杀商品</li>
+<li>定时准点抢票</li>
+</ul>
+<p>等等不一而足，手机上手动能做的，都能给它自动化了~</p>
+<p>auto.js 大部分的操作都是基于 坐标 的模拟手势，但是也支持更复杂的控件操作，甚至能连接Java。</p>
+<p>如何确定坐标就显得至关重要了，如何操作呢？</p>
+<ol>
+<li>设置-》关于本机-》版本号</li>
+<li>连续点击 版本号 几次后打开开发者模式</li>
+<li>开发这模式中：指针位置 开关</li>
+<li>开启后，在手机的屏幕上显示 横纵坐标，型号不同位置和显示效果也不同</li>
+</ol>
+<h2 id="三-实现收取能量的简要步骤">三 实现收取能量的简要步骤</h2>
+<ol>
+<li>Android手机一个</li>
+<li>下载 auto.js  APK 安装包 <a href="https://300m.oss-cn-hangzhou.aliyuncs.com/software/Auto.js.apk(">https://300m.oss-cn-hangzhou.aliyuncs.com/software/Auto.js.apk(</a>酷安好像是下架了，找了半天找到一个)</li>
+<li>安装 auto.js</li>
+<li>（自己写好费劲呢，GitHub能人多多，检索得来，这个项目算是自认为比较做的比较好的，各种封装配置都有，thanks这个仁兄）下载项目Ant-Forest</li>
+<li>Ant-Forest 导入 auto.js</li>
+<li>运行脚本，配置信息，收取~</li>
+</ol>
+<p>到此为止，已经能实现我想要的功能，但如果想要进一步，学习学习auto.js，不局限于只会用别人的项目，不受制于人，而是要懂如何来做自动化的项目，当然还是要安装：</p>
+<ul>
+<li>vscode 编辑器</li>
+<li>Auto.js-VSCode-Extension vscode扩展插件。</li>
+</ul>
+<p>两者合一，不用再在手机端费劲吧唧地编辑js脚本文件，在电脑端手指飞速地编辑JS脚本后，直接保存推送到Android 手机的auto.js软件上，运行即可！</p>
+<p>世界是动态发展的，技术是迭代更新的，此时此刻收取能量是OK的，能用多久不可知，唯一不变的就是变化，所以要与时俱进，会持续的跟进~~~</p>
+<h2 id="四-提醒">四 提醒：</h2>
+<p><em><strong>违法犯罪的项目坚决别做，提高效率的项目必须要搞！</strong></em></p>
+<h2 id="五-参考链接">五 参考链接：</h2>
+<ul>
+<li>
+<p>官方论坛：<a href="https://www.autojs.org/">https://www.autojs.org/</a></p>
+</li>
+<li>
+<p>项目地址：<a href="https://github.com/hyb1996/Auto.js">https://github.com/hyb1996/Auto.js</a></p>
+</li>
+<li>
+<p>项目文档：<a href="https://hyb1996.github.io/AutoJs-Docs/#/">https://hyb1996.github.io/AutoJs-Docs/#/</a></p>
+</li>
+<li>
+<p>能量收取项目地址：<a href="https://github.com/SuperMonster003/Ant-Forest">https://github.com/SuperMonster003/Ant-Forest</a></p>
+</li>
+<li>
+<p>vscode插件项目地址：<a href="https://github.com/hyb1996/Auto.js-VSCode-Extension">https://github.com/hyb1996/Auto.js-VSCode-Extension</a></p>
+</li>
+</ul>
+
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">chosen1cwp</a> with
+    <a href="https://github.com/chosen1cwp">Github Home</a>.
+</div>
+
+    </div>
+  </body>
+</html>
