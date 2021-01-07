@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>©2020 chosen1cwp.</copyright>
-    <lastBuildDate>Wed, 30 Dec 2020 17:01:54 +0800</lastBuildDate><atom:link href="http://blog.chosen1cwp.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Jan 2021 17:47:21 +0800</lastBuildDate><atom:link href="http://blog.chosen1cwp.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何有效控制情绪</title>
+      <link>http://blog.chosen1cwp.com/posts/%E5%A6%82%E4%BD%95%E6%9C%89%E6%95%88%E6%8E%A7%E5%88%B6%E6%83%85%E7%BB%AA/</link>
+      <pubDate>Wed, 06 Jan 2021 17:47:21 +0800</pubDate>
+      
+      <guid>http://blog.chosen1cwp.com/posts/%E5%A6%82%E4%BD%95%E6%9C%89%E6%95%88%E6%8E%A7%E5%88%B6%E6%83%85%E7%BB%AA/</guid>
+      <description>昨天与同事间发生一些不愉快的事，一瞬间没能控制住自己的情绪，回过头来就是后悔！可也没得后悔药！ 生气的2个点 前一天确认问题，一直没回 今天再问，</description>
+    </item>
+    
+    <item>
+      <title>创业资产保护文档DWQ</title>
+      <link>http://blog.chosen1cwp.com/posts/%E5%88%9B%E4%B8%9A%E8%B5%84%E4%BA%A7%E4%BF%9D%E6%8A%A4%E6%96%87%E6%A1%A3dwq/</link>
+      <pubDate>Tue, 05 Jan 2021 15:35:43 +0800</pubDate>
+      
+      <guid>http://blog.chosen1cwp.com/posts/%E5%88%9B%E4%B8%9A%E8%B5%84%E4%BA%A7%E4%BF%9D%E6%8A%A4%E6%96%87%E6%A1%A3dwq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>创业资产保护文档A</title>
+      <link>http://blog.chosen1cwp.com/posts/%E5%88%9B%E4%B8%9A%E8%B5%84%E4%BA%A7%E4%BF%9D%E6%8A%A4%E6%96%87%E6%A1%A3a/</link>
+      <pubDate>Tue, 05 Jan 2021 15:35:25 +0800</pubDate>
+      
+      <guid>http://blog.chosen1cwp.com/posts/%E5%88%9B%E4%B8%9A%E8%B5%84%E4%BA%A7%E4%BF%9D%E6%8A%A4%E6%96%87%E6%A1%A3a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitbisect快速定位bug</title>
+      <link>http://blog.chosen1cwp.com/posts/gitbisect%E5%BF%AB%E9%80%9F%E5%AE%9A%E4%BD%8Dbug/</link>
+      <pubDate>Tue, 05 Jan 2021 15:34:49 +0800</pubDate>
+      
+      <guid>http://blog.chosen1cwp.com/posts/gitbisect%E5%BF%AB%E9%80%9F%E5%AE%9A%E4%BD%8Dbug/</guid>
+      <description>业务场景 某一天，业务部门反馈说系统某个功能现在不能用了，之前还是能用的，你有点诧异，随即在开发环境一测，果然如此。此时你一定在想到底咋回事？</description>
+    </item>
+    
     <item>
       <title>意外险</title>
       <link>http://blog.chosen1cwp.com/posts/accident_insurance/</link>
