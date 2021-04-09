@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chosen1cwp&#39;s Blog</title>
+    <link>https://blog.chosen1cwp.com/</link>
+    <description>Recent content on Chosen1cwp&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>©2020 chosen1cwp.</copyright>
+    <lastBuildDate>Tue, 02 Mar 2021 16:40:55 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oracle数据实时同步MySQL</title>
+      <link>https://blog.chosen1cwp.com/posts/oracle%E6%95%B0%E6%8D%AE%E5%AE%9E%E6%97%B6%E5%90%8C%E6%AD%A5mysql/</link>
+      <pubDate>Tue, 02 Mar 2021 16:40:55 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/oracle%E6%95%B0%E6%8D%AE%E5%AE%9E%E6%97%B6%E5%90%8C%E6%AD%A5mysql/</guid>
+      <description>场景： 原oracle数据库与新mysql数据库中数据能够保持了相对平衡的一致性，旧应用在oracle上的增删改能够尽量实时地同步到mysql</description>
+    </item>
+    
+    <item>
+      <title>2021总部基本法整理文档</title>
+      <link>https://blog.chosen1cwp.com/posts/2021%E6%80%BB%E9%83%A8%E5%9F%BA%E6%9C%AC%E6%B3%95%E6%95%B4%E7%90%86%E6%96%87%E6%A1%A3/</link>
+      <pubDate>Mon, 01 Mar 2021 15:44:38 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/2021%E6%80%BB%E9%83%A8%E5%9F%BA%E6%9C%AC%E6%B3%95%E6%95%B4%E7%90%86%E6%96%87%E6%A1%A3/</guid>
+      <description>总部基本法文档 一，概述 代理人职级 经纪人 总监（管理层） 总监处标准架构 1（A04） + 8（A01） 总监处架构图 二，代理人管理（4月初） 增员 新增 修改</description>
+    </item>
+    
+    <item>
+      <title>Gitbisect快速定位bug</title>
+      <link>https://blog.chosen1cwp.com/posts/gitbisect%E5%BF%AB%E9%80%9F%E5%AE%9A%E4%BD%8Dbug/</link>
+      <pubDate>Tue, 05 Jan 2021 15:34:49 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/gitbisect%E5%BF%AB%E9%80%9F%E5%AE%9A%E4%BD%8Dbug/</guid>
+      <description>业务场景 某一天，业务部门反馈说系统某个功能现在不能用了，之前还是能用的，你有点诧异，随即在开发环境一测，果然如此。此时你一定在想到底咋回事？</description>
+    </item>
+    
+    <item>
+      <title>四大险种之一意外险</title>
+      <link>https://blog.chosen1cwp.com/posts/%E5%9B%9B%E5%A4%A7%E9%99%A9%E7%A7%8D%E4%B9%8B%E4%B8%80%E6%84%8F%E5%A4%96%E9%99%A9/</link>
+      <pubDate>Wed, 30 Dec 2020 17:01:54 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/%E5%9B%9B%E5%A4%A7%E9%99%A9%E7%A7%8D%E4%B9%8B%E4%B8%80%E6%84%8F%E5%A4%96%E9%99%A9/</guid>
+      <description>四大险种之一意外险 本周收到**保险APP的提示短信：您购买的意外险将于本月底到期，请提前投保续约！ 去年配置的意外险是：上海人寿的小蜜蜂全年综</description>
+    </item>
+    
+    <item>
+      <title>Finland Aurora</title>
+      <link>https://blog.chosen1cwp.com/photos/finland-aurora/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/photos/finland-aurora/</guid>
+      <description>芬兰.极光 芬兰是北欧的一个神奇国家，那里有着圣诞老人的故事，还有维京海盗的传说，一切都是童话般美好。特别是，芬兰的国土有三分之一都在北极圈内</description>
+    </item>
+    
+    <item>
+      <title>社保-养老保险</title>
+      <link>https://blog.chosen1cwp.com/posts/%E7%A4%BE%E4%BF%9D%E5%85%BB%E8%80%81/</link>
+      <pubDate>Wed, 11 Nov 2020 16:22:17 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/%E7%A4%BE%E4%BF%9D%E5%85%BB%E8%80%81/</guid>
+      <description>养老保险 缴费：单位缴费多，个人缴费少，累计（中间断交也是可以的）交满15年，达到退休年龄可申请领取，可适当抵御通货膨胀（领取金额参考：当地上</description>
+    </item>
+    
+    <item>
+      <title>One_time_work</title>
+      <link>https://blog.chosen1cwp.com/posts/one_time_work/</link>
+      <pubDate>Mon, 28 Sep 2020 19:46:07 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/one_time_work/</guid>
+      <description>一次性工作 每次看到 IT 公司的招聘广告，我往往有一种感觉，很多工作是一次性工作。所谓&amp;quot; 一次性工作&amp;quot;，就是企业用完人之后，就会</description>
+    </item>
+    
+    <item>
+      <title>Linux_issue_solve</title>
+      <link>https://blog.chosen1cwp.com/posts/linux_issue_solve/</link>
+      <pubDate>Sun, 30 Aug 2020 22:54:01 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/linux_issue_solve/</guid>
+      <description>Linux 服务器删除大日志文件磁盘空间仍旧未释放问题排查 查看磁盘利用情况 收到磁盘预警邮件后，查看邮件内容，提示云服务器磁盘利用率已经 大于 90%，估计</description>
+    </item>
+    
+    <item>
+      <title>Mysql_skill_concat</title>
+      <link>https://blog.chosen1cwp.com/posts/mysql_skill_concat/</link>
+      <pubDate>Thu, 25 Jun 2020 21:15:20 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/mysql_skill_concat/</guid>
+      <description>MySQL查询某一列列值拼接起来 需求 查询某一列并把列值拼接起来，拼接符用逗号 实现 借助于GROUP_CONCAT()函数的SQL语句： SELECT GROUP_CONCAT(concat(&amp;quot;&#39;&amp;quot;,a.`fieldName`,&amp;quot;&#39;&amp;quot;)) AS fieldNameStr</description>
+    </item>
+    
+    <item>
+      <title>波兰.华沙</title>
+      <link>https://blog.chosen1cwp.com/photos/warsaw-poland/</link>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/photos/warsaw-poland/</guid>
+      <description>文化科学宫 是波兰华沙市中心一座著名的高层建筑。它的总高度为237米（778英尺），是波兰最高的建筑，欧盟第五高楼（包括塔尖），也是欧洲大陆最</description>
+    </item>
+    
+    <item>
+      <title>波兰，赫尔半岛</title>
+      <link>https://blog.chosen1cwp.com/photos/hel-poland-3/</link>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/photos/hel-poland-3/</guid>
+      <description>赫尔半岛 赫尔半岛是波兰北部一个35公里长的沙洲半岛，将普克湾与波罗的海隔开。 半岛的宽度在朱拉塔附近大约300米不等，最窄的部分有100米，顶</description>
+    </item>
+    
+    <item>
+      <title>波兰，赫尔半岛</title>
+      <link>https://blog.chosen1cwp.com/photos/hel-poland-2/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/photos/hel-poland-2/</guid>
+      <description>赫尔半岛 赫尔半岛是波兰北部一个35公里长的沙洲半岛，将普克湾与波罗的海隔开。 半岛的宽度在朱拉塔附近大约300米不等，最窄的部分有100米，顶</description>
+    </item>
+    
+    <item>
+      <title>美国亚利桑那州</title>
+      <link>https://blog.chosen1cwp.com/photos/arizona-us/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/photos/arizona-us/</guid>
+      <description>科罗拉多大峡谷 科罗拉多大峡谷是由美国亚利桑那州科罗拉多河雕刻而成的陡峭峡谷。峡谷长277英里（446公里），宽达18英里（29公里），深度超</description>
+    </item>
+    
+    <item>
+      <title>美国芝加哥</title>
+      <link>https://blog.chosen1cwp.com/photos/chicago-us/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/photos/chicago-us/</guid>
+      <description>芝加哥 芝加哥市是美国伊利诺伊州人口最多的城市，也是美国第三大人口城市。估计人口为2705994人（2018年），也是美国中西部人口最多的城市</description>
+    </item>
+    
+    <item>
+      <title>印度.帕纳吉</title>
+      <link>https://blog.chosen1cwp.com/photos/panaji-india-2/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/photos/panaji-india-2/</guid>
+      <description>帕纳吉 原名潘吉姆，是印度果阿州首府和北果阿区总部。它位于Ilhas de Goa分区（taluka）的Mandovi河口岸边。潘吉姆是果阿最大的城</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://blog.chosen1cwp.com/about/</link>
+      <pubDate>Mon, 05 Nov 2018 21:05:33 +0530</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/about/</guid>
+      <description>Creed 见自己、见天地、见众生，实践出真知 About 之前有一博客站是基于hexo搭建，随着时间流失资源积累，每次生成静态站点变得越越来越慢，随即基于hug</description>
+    </item>
+    
+  </channel>
+</rss>
