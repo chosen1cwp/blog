@@ -7,7 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>©2020 chosen1cwp.</copyright>
-    <lastBuildDate>Tue, 02 Mar 2021 16:40:55 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Mar 2021 16:40:55 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.chosen1cwp.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Oracle数据实时同步MySQL</title>
       <link>https://blog.chosen1cwp.com/posts/oracle%E6%95%B0%E6%8D%AE%E5%AE%9E%E6%97%B6%E5%90%8C%E6%AD%A5mysql/</link>
@@ -68,7 +72,7 @@
       <pubDate>Mon, 28 Sep 2020 19:46:07 +0800</pubDate>
       
       <guid>https://blog.chosen1cwp.com/posts/one_time_work/</guid>
-      <description>一次性工作 每次看到 IT 公司的招聘广告，我往往有一种感觉，很多工作是一次性工作。所谓&amp;quot; 一次性工作&amp;quot;，就是企业用完人之后，就会</description>
+      <description>一次性工作 每次看到 IT 公司的招聘广告，我往往有一种感觉，很多工作是一次性工作。所谓&amp;rdquo; 一次性工作&amp;rdquo;，就是企业用完人之后，</description>
     </item>
     
     <item>
@@ -95,7 +99,7 @@
       <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.chosen1cwp.com/photos/warsaw-poland/</guid>
-      <description>文化科学宫 是波兰华沙市中心一座著名的高层建筑。它的总高度为237米（778英尺），是波兰最高的建筑，欧盟第五高楼（包括塔尖），也是欧洲大陆最</description>
+      <description>文化科学宫 &amp;gt; 是波兰华沙市中心一座著名的高层建筑。它的总高度为237米（778英尺），是波兰最高的建筑，欧盟第五高楼（包括塔尖），也是欧洲大陆</description>
     </item>
     
     <item>
@@ -140,7 +144,7 @@
       <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.chosen1cwp.com/photos/panaji-india-2/</guid>
-      <description>帕纳吉 原名潘吉姆，是印度果阿州首府和北果阿区总部。它位于Ilhas de Goa分区（taluka）的Mandovi河口岸边。潘吉姆是果阿最大的城</description>
+      <description>帕纳吉 &amp;gt; 原名潘吉姆，是印度果阿州首府和北果阿区总部。它位于Ilhas de Goa分区（taluka）的Mandovi河口岸边。潘吉姆是果阿最大的</description>
     </item>
     
     <item>
