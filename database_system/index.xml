@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database_systems on Chosen1cwp&#39;s Blog</title>
+    <link>https://blog.chosen1cwp.com/database_system/</link>
+    <description>Recent content in Database_systems on Chosen1cwp&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>©2020 chosen1cwp.</copyright>
+    <lastBuildDate>Fri, 09 Apr 2021 13:00:38 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/database_system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第八章 数据管理技术的发展</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter8/</link>
+      <pubDate>Fri, 09 Apr 2021 13:00:38 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>第七章 数据库应用设计与开发实例</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter7/</link>
+      <pubDate>Fri, 09 Apr 2021 13:00:34 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>第六章 数据库安全与保护</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter6/</link>
+      <pubDate>Fri, 09 Apr 2021 13:00:31 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>第五章 数据库编程</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter5/</link>
+      <pubDate>Fri, 09 Apr 2021 13:00:28 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>第四章 SQL与关系数据库基本操作</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter4/</link>
+      <pubDate>Fri, 09 Apr 2021 13:00:05 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter4/</guid>
+      <description>SQL 结构化查询语言（Structured Query Language，SQL）是专门用来与数据库通信的语言，它可以帮助用户操作关系数据库。 特点： SQL不</description>
+    </item>
+    
+    <item>
+      <title>第三章 数据库设计</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter3/</link>
+      <pubDate>Fri, 09 Apr 2021 13:00:02 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter3/</guid>
+      <description>第一范式 1NF 设R为任一给定关系，如果R中每个 列与行交点处的 取值 都是 不可再分的基本元素，则R为第一范式 第二范式 2NF 设R为任一给定关系，若R为1NF</description>
+    </item>
+    
+    <item>
+      <title>第二章 关系数据库</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter2/</link>
+      <pubDate>Fri, 09 Apr 2021 12:59:59 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter2/</guid>
+      <description>关系数据库的产生历史 1970年 IBM 提出了关系模型，奠定了关系数据库的理论基础 20世纪70年代末（1975~1980）关系方法理论研究和软件系统</description>
+    </item>
+    
+    <item>
+      <title>第一章 数据库系统概述</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter1/</link>
+      <pubDate>Fri, 09 Apr 2021 12:59:00 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter1/</guid>
+      <description>数据 数据（Data）是描述事物的符号记录，是指利用物理符号记录下来的、可以鉴别的信息。 数据的语义：数据是信息存在的一种形式，只有通过解释或处</description>
+    </item>
+    
+  </channel>
+</rss>

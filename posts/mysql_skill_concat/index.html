@@ -58,50 +58,36 @@ Jun. 25, 2020
 
 
 <br/><br/>
-
-
 <h3 id="mysql查询某一列列值拼接起来">MySQL查询某一列列值拼接起来</h3>
-
 <h4 id="需求">需求</h4>
-
 <blockquote>
 <p>查询某一列并把列值拼接起来，拼接符用逗号</p>
 </blockquote>
-
 <h4 id="实现">实现</h4>
-
 <blockquote>
 <p>借助于<code>GROUP_CONCAT()</code>函数的SQL语句：</p>
 </blockquote>
-
 <pre><code>SELECT
 	  GROUP_CONCAT(concat(&quot;'&quot;,a.`fieldName`,&quot;'&quot;)) AS fieldNameStr
 FROM
 	`tableName` a 
 WHERE
 	 a.`fieldState` = 1
-</code></pre>
-
-<h4 id="注意事项">注意事项</h4>
-
+</code></pre><h4 id="注意事项">注意事项</h4>
 <p>如果拼接的列值字符串长度超过了默认的1024，就会自动截断，只保留前面1024个字符，所以使用时需要注意这点。</p>
-
 <p>如果确认超过了1024的默认长度，先查看系统设置的长度</p>
-
 <pre><code>SHOW VARIABLES LIKE 'group_concat_max_len';
-</code></pre>
-
-<p>如果<code>group_concat_max_len</code>value 值 小于拼接字符的长度，则有两种方法：</p>
-
+</code></pre><p>如果<code>group_concat_max_len </code>value 值 小于拼接字符的长度，则有两种方法：</p>
 <ul>
-<li><p>临时设置group_concat_max_len的最大长度值，修改MySQL的配置文件<code>group_concat_max_len = 102400</code>，设置后重启服务
-&gt; SET GLOBAL group_concat_max_len = 102400;
-&gt;
-&gt; SET SESSION group_concat_max_len = 102400;</p></li>
-
-<li><p>永久设置group_concat_max_len的value值，设置后重启服务</p></li>
+<li>临时设置group_concat_max_len的最大长度值，修改MySQL的配置文件<code>group_concat_max_len = 102400</code>，设置后重启服务</li>
 </ul>
-
+<blockquote>
+<p>SET GLOBAL group_concat_max_len = 102400;</p>
+<p>SET SESSION group_concat_max_len = 102400;</p>
+</blockquote>
+<ul>
+<li>永久设置group_concat_max_len的value值，设置后重启服务</li>
+</ul>
 <p>设置完成后，再执行查询语句就好了，不会截断语句了！</p>
 
 

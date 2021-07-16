@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chosen1cwp&#39;s Blog/c&#43;&#43;/chapter2/</title>
+    <meta name="description" content="chosen1cwp 的个人博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/terminal-0.7.1.min.css">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/animate-3.7.2.min.css">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="密训资料" />
+<meta property="og:description" content="chosen1cwp 的个人博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.chosen1cwp.com/c&#43;&#43;/chapter2/" /><meta property="article:published_time" content="2021-04-07T15:01:08+08:00" />
+
+
+
+<meta name="twitter:title" content="密训资料"/>
+<meta name="twitter:description" content="const 与 指针 共同使用 如果唯一的const 位于符号 * 的左侧，表示 指针所指数据是常量，数据不同通过本指针改变，但可以通过其他方式改变，指针本身是变量"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://blog.chosen1cwp.com/" class="no-style site-name">Chosen1cwp&#39;s Blog</a>:~# 
+              <a href='https://blog.chosen1cwp.com/c&#43;&#43;'>c&#43;&#43;</a>/<a href='https://blog.chosen1cwp.com/c&#43;&#43;/chapter2'>chapter2</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://blog.chosen1cwp.com/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://blog.chosen1cwp.com/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://blog.chosen1cwp.com/photos/" typeof="ListItem">photos/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast">
+        
+<h1>密训资料</h1>
+<p>const 与 指针 共同使用</p>
+<ol>
+<li>如果唯一的const 位于符号 * 的左侧，表示 指针所指数据是常量，数据不同通过本指针改变，但可以通过其他方式改变，指针本身是变量，可以指向其他的内存单元
+指针式变量，所指的数据时常量</li>
+<li>如果唯一的const 位于符号 * 的右侧，表示指针本身是常量，不能让该指针指向其他内存地址，指针所指的数据可以通过本指针修改</li>
+<li>在符号* 左右两边各有一个const时，表示指针和指针所指数据都是常量，既不能让指针指向其他内存地址，也不能通过指针修改所指向的内容</li>
+</ol>
+<p>c++语言以 .cpp作为文件扩展名</p>
+<p>程序中必须有且仅有一个主函数main(),这是程序执行的总入口，主函数也称为主程序。</p>
+<p>程序从主函数main()的开始处执行，主函数可以再任何地方出现，按照其控制结构，一直执行到结束。</p>
+<p>程序的结束一般是遇到了两种情况：</p>
+<ul>
+<li>主函数终于到了return 语句</li>
+<li>助兴到主函数最后面的括号</li>
+</ul>
+<h3 id="第二章-面向对象的基本概念">第二章 面向对象的基本概念</h3>
+<p>编写程序时，使用3种基本控制结构来构造程序：</p>
+<ul>
+<li>顺序</li>
+<li>选择</li>
+<li>循环</li>
+</ul>
+<p>面向对象思想</p>
+<blockquote>
+<p>对象是类的一个实例
+对象是类的一个具象
+雷士对象的一个抽象
+对象具有两个特性：一是状态（也称为属性）；二是行为（也称为操作）
+状态是之对象本身的信息，也称为属性
+行为是对对象的操作
+通过对对象的抽象，找出同一类对象的共同属性（静态特征）和行为（动态特征），从而得到类的概念。</p>
+</blockquote>
+<p>面向对象程序设计的特点</p>
+<ul>
+<li>抽象</li>
+<li>封装 将对象的属性及实现细节隐藏起来，只给出如何使用的信息。将数据成员使用private关键字定义，则产生封装性</li>
+<li>继承</li>
+<li>多态不同种类的对象都具有名称相同的行为，而具体行为的实现方式却有所不同</li>
+</ul>
+<p>类的定义</p>
+<ol>
+<li>标识符命名规则</li>
+</ol>
+<blockquote>
+<p>祖母、数字、下划线的组合，大小写敏感，但不能以数字开头，也不能和系统中使用的关键字完全相同</p>
+</blockquote>
+<ol start="2">
+<li>类的成员</li>
+</ol>
+<blockquote>
+<p>勒种定义的数据和函数称为类的成员（数据成员和成员函数）</p>
+</blockquote>
+<ol start="3">
+<li>类体外函数定义使用<code>类名：：</code>来限定，格式如下
+<code>返回值类型 类名::成员函数名（参数列表） { 成员函数的函数体 }</code></li>
+</ol>
+<p>程序结构</p>
+<p>.h 文件是头文件
+.cpp 文件是源程序文件
+.obj C源程序文件编译而成的目标文件的扩展名
+.exe 可执行代码的文件扩展名</p>
+<p>创建类对象的基本形式
+<code>类名 *对象指针名 = new 类名;</code>
+创建对象是调用无参的构造函数，如果这个构造函数有编译器为类提供的，则勒种的成员变量不进行初始化</p>
+<p><code>类名 *对象指针名 = new 类名();</code>
+创建对象时也调用无参的构造函数，如果这个构造函数是由编译器为类提供的，则对类中的成员变量记性初始化</p>
+<p>访问对象的成员</p>
+<ul>
+<li>访问对象 如果变量a为结构体对象，且结构体内有元素b，那么可以使用<code>a.b</code>的方式访问元素</li>
+<li>访问指针 如果变量a为结构体指针，且结构体内有元素b，那么可以使用<code>a-&gt;b</code>的方式访问元素</li>
+<li>访问引用 访问成员时仍使用点操作符，即<code>引用名.成员名</code></li>
+</ul>
+<p>访问范围说明</p>
+<ul>
+<li>private 私有的 使用它修饰的类的成员仅能在本类内被访问（默认）</li>
+<li>public 公有的 使用它修饰的类的成员可以在程序的任何地方被访问</li>
+<li>protected 保护的 它的作用介于public和private之间，使用它修饰的类的成员能子啊本类内及子类内被访问</li>
+</ul>
+<h3 id="类和对象的进阶">类和对象的进阶</h3>
+<p>构造函数的作用</p>
+<blockquote>
+<p>完成对象的初始化工作（即创建对象）
+声明对象后，可以使用new运算符对对象进行初始化，此时调用的是对象所属类的<strong>构造函数</strong></p>
+</blockquote>
+<p>构造函数的定义</p>
+<ul>
+<li>构造函数的函数名与类名相同，没有返回值，一个类的构造函数可以有多个，即<strong>构造函数允许重载</strong>，这些构造函数之间的关系是重载关系</li>
+<li>当勒种没有定义任何的构造函数时，系统会自动添加一个参数表为空、函数体也为空的构造函数，称为<strong>默认构造函数</strong></li>
+<li>定义构造函数的类型
+<code>类名::类名（形参1,形参2...,形参n） { x1=形参1; x2=形参 2;  …… xn=形参 n; }</code></li>
+</ul>
+<p>构造函数的使用</p>
+<blockquote>
+<p>如果程序中声明了对象数组，即数组的每个元素都是一个对象
+创建对象时调用一次构造函数
+对于指针，仅仅是说明了这个指针，并未与对象相关，所以并不调用构造函数</p>
+</blockquote>
+<p>复制构造函数</p>
+<blockquote>
+<p>复制构造函数是构造函数的一种，也称为<strong>拷贝构造函数</strong>
+它的作用是使用一个已经存在的对象去初始化另一个正在创建的对象
+复制构造函数只有一个参数，参数类型是本类的引用，即引用类自己
+对于类A而言，复制构造函数的原型如下：
+<code>A::A(const A&amp;) A::A(A &amp;)</code>
+析构函数
+与构造函数一样，析构函数也是成员函数的一种，它的名字业余类名相同，但是要在类名前加一个<code>~</code>字符，以区别于构造函数
+析构函数的特点：
+没有参数，也没有返回值。析构函数不能多于一个，不会有重载的析构函数，默认析构函数的函数体为空。
+一个类中有且仅有一个析构函数
+创建对象时自动调用构造函数，在对象消亡时自动调用<strong>析构函数</strong></p>
+</blockquote>
+<p>静态变量</p>
+<blockquote>
+<p>static 用来声明静态变量
+局部变量：块内定义的变量
+全局变量：指在所有花括号之外声明的变量，其作用域范围全局课件，即在整个项目文件内部有效</p>
+</blockquote>
+<p>类的静态成员</p>
+<ol>
+<li>类的静态成员有两种：静态成员变量 和 静态成员函数</li>
+<li>静态成员函数变量只有一份，被同类所有对象共享</li>
+<li>访问静态成员时，成员前面可以用类名做前缀，格式如下：类名::静态成员名</li>
+</ol>
+<p>友元</p>
+<blockquote>
+<p>友元使用关键字<code>friend</code>标识
+友元的概念破坏了类的封装性和信息隐藏，但有助于数据共享，能够提高程序执行的效率</p>
+</blockquote>
+<p>友元函数</p>
+<ol>
+<li>在友元函数内部可以直接访问本类对象的私有成员</li>
+<li>在类定义中，将一个全局函数声明为本类的友元函数格式<code>friend 返回值类型 函数名（参数列表）;</code></li>
+<li>一个类的成员函数（包括构造函数和析构函数）可以通过使用<code>friend</code>说明为另一个类的友元，但友元函数本身并不是类的成员函数，但允许访问勒种的其他成员</li>
+</ol>
+<p>this指针</p>
+<ol>
+<li>c++语言规定，当调用一个成员函数时，系统自动向它传递一个隐含的参数，该参数是一个指向调用该函数的对象的指针，也称为<strong>this指针</strong>，从而使成员函数知道对哪个对象操作</li>
+<li>目的：使用this指针，保证了每个对象可以拥有自己的数据成员，但处理这些数据成员的代码可以被所有的<strong>对象共享</strong></li>
+<li>c++规定，在非静态成员函数内部可以直接使用this关键字，this就代表了指向该函数所作用的对象的指针</li>
+</ol>
+<h3 id="第四章-运算符重载">第四章 运算符重载</h3>
+<p>概念
+可重载的运算符</p>
+<ul>
+<li>双目运算符 +(加) -(减) *(乘) /(除) %(取模)</li>
+<li>关系运算符 ==(等于) !=(不等于) &lt;(小于) &gt;(大于) &lt;=(小于等于)，&gt;=(大于等于)</li>
+<li>逻辑运算符 ||(逻辑或) &amp;&amp;(逻辑与) !(逻辑非)</li>
+<li>单目运算符 +(正)，-(负)，*(指针)，&amp;(取地址)</li>
+<li>自增自减运算符 ++(自增)，&ndash;(自减)</li>
+</ul>
+<p>不可重载的运算符</p>
+<ul>
+<li>成员访问运算符 .</li>
+<li>成员指针访问运算符 .<em>,-&gt;</em></li>
+<li>域运算符 ::</li>
+<li>长度运算符 sizeof</li>
+<li>条件运算符 ?:</li>
+<li>预处理符号 #</li>
+</ul>
+<p>重载运算符函数的格式如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#960050;background-color:#1e0010">返回值类型</span> <span style="color:#66d9ef">operator</span> <span style="color:#960050;background-color:#1e0010">运算符</span>(<span style="color:#960050;background-color:#1e0010">形参表</span>)
+{
+    <span style="color:#960050;background-color:#1e0010">函数体</span>
+}
+</code></pre></div><p>运算符重载规则</p>
+<ul>
+<li>1)重载后运算符的含义应该符合原有的用法习惯。</li>
+<li>2)运算符重载不能改变运算符原有的语义，包括运算符的优先级和结合性。</li>
+<li>3)运算符重载不能改变运算符操作数的个数及语法结构。</li>
+<li>4)不能创建新的运算符，即重载运算符不能超出 C++语言允许重载的运算符范围。</li>
+<li>5)重载运算符“()”“[]”“-&gt;”或者赋值运算符“=”时，只能将它们重载为成员函数，不能重载为全局函数。</li>
+<li>6)运算符重载不能改变该运算符用于基本数据类型对象的含义。</li>
+</ul>
+<p>重载自增运算符</p>
+<ol>
+<li>自增运算符<code>++</code>有前置和后置之分</li>
+<li>使用类运算符”++”运算符，使用函数调用方式，例：若前缀：++n 为 n.operator++()；若后缀：n++为 n.operator++(0);</li>
+</ol>
+<h3 id="第五章-类的继承与派生">第五章 类的继承与派生</h3>
+<p>继承的概念</p>
+<blockquote>
+<p>使用基类派生新类时，除构造函数和析构函数外，基类的所有成员自动成为派生类的成员，包括：基类的成员变量和成员函数
+派生类可以重新定义或修改基类中已有的成员，包括：可以改变基类中成员的访问权限
+派生类也需要定义自己的 构造函数和析构函数</p>
+</blockquote>
+<p>继承关系的特殊性</p>
+<ul>
+<li>基类的友元不一定是派生类的友元</li>
+<li>基类的成员函数是某类的友元函数，则其作为派生类继承的成员函数仍是某类的<strong>友元函数</strong></li>
+<li>如果基类的静态成员是公有的或是保护的，则它们被其派生类继承为派生类的静态成员。访问这些成员时，通常用“&lt;类名&gt;::&lt;成员名&gt;”的方式引用或调用。</li>
+</ul>
+<p>c++中有两种继承</p>
+<ul>
+<li>单一继承，派生类只有一个基类</li>
+<li>多重继承，派生类可以有多个基类，一个派生类同时有一个以上的基类，多个基类中的所有成员（除构造函数和析构函数外）都被派生类继承</li>
+</ul>
+<p>访问控制</p>
+<blockquote>
+<p>继承方式，不同基类中的成员在派生类中的访问权限可能也不同</p>
+</blockquote>
+<ol>
+<li>当类的继承方式为公有继承时，积累的公有成员和保护成员的访问属性在派生类中不变，而基类中的私有成员在积累外不可直接访问</li>
+<li>当类的继承方式为私有继承时，基类中的公有成员以私有成员的身份出现在派生类中</li>
+<li>当类的继承方式为保护继承时，基类中的公有成员以保护成员的身份出现在派生类中</li>
+</ol>
+<p>类型兼容规则
+在公有派生的情况下，有以下 3 条类型兼容规则。</p>
+<ol>
+<li>派生类的对象可以赋值给基类对象。</li>
+<li>派生类对象可以用来初始化基类引用。</li>
+<li>派生类对象的地址可以赋值给基类指针，即派生类的指针可以赋值给基类的指针。</li>
+</ol>
+<p>派生类构造函数
+派生类的构造函数必须对三类成员进行初始化，其执行顺序</p>
+<ol>
+<li>调用基类的构造函数</li>
+<li>调用子对象的构造函数</li>
+<li>派生类的构造函数体
+在执行一个派生类的构造函数之前，必须先执行<code>基类的构造函数</code>
+派生类对象消亡时，必须先执行派生类的析构函数，在执行基类的析构函数</li>
+</ol>
+<p>类之间的关系</p>
+<ol>
+<li>继承关系，也称为 <code>is a</code> 关系 或 <code>是</code> 关系</li>
+<li>组合关系，也称为 <code>has a</code> 关系 或 <code>有</code> 关系，表现为封闭性，即一个类以另一个类的对象作为成员变量</li>
+</ol>
+<p>多层次派生
+c++中，派生可以使多层次的。
+如类 A 派生类 B，类 B 可以再派生类 C，类 C 又能够派生类 D，以此类推。在 C++中，类之间的继承关系具有传递性。</p>
+<h3 id="第六章-多态与虚函数">第六章 多态与虚函数</h3>
+<p>多态分为</p>
+<ol>
+<li>编译时多态：静态绑定、早绑定 主要指函数的重载（包括运算符的重载）</li>
+<li>运行时多态：动态绑定、晚绑定 和继承、虚函数等概念有关</li>
+</ol>
+<p>不论是静态还是动态，多态性肯定调用的是<strong>同名的函数</strong></p>
+<p>在类之间满足赋值兼容的前提下，实现动态绑定必须满足两个条件：</p>
+<ol>
+<li>必须声明虚函数</li>
+<li>通过基类的引用或指针调用虚函数</li>
+</ol>
+<p>虚函数</p>
+<ol>
+<li>虚函数
+<blockquote>
+<p>就是在函数声明前面加了 <code>virtual</code> 关键字的成员函数</p>
+</blockquote>
+</li>
+<li>声明虚函数的一般格式
+<blockquote>
+<p>：<code>virtual 函数返回值类型 函数名(形参表);</code></p>
+</blockquote>
+</li>
+<li>通过<strong>基类指针</strong>或<strong>基类引用</strong>调用<strong>虚函数</strong>时，都会产生动态多态</li>
+</ol>
+<p>纯虚函数</p>
+<blockquote>
+<p>声明在基类中的虚函数，没有具体的定义，而由各派生类根据实际需要给出各自的定义</p>
+</blockquote>
+<p>声明纯虚函数的格式如下：
+<code>virtual 函数类型 函数名(参数表)=0;</code></p>
+<p>定义纯虚函数的几个要素：</p>
+<ol>
+<li>使用 <code>virtual</code> 关键字 进行修饰</li>
+<li>函数定义中要有<code>=0</code></li>
+<li>没有函数体，大括号也没有</li>
+</ol>
+<p>抽象类</p>
+<blockquote>
+<p>包含纯虚函数的类称为抽象类，即抽象类至少含有一个纯虚函数
+抽象类的派生类中，如果没有给出全部纯虚函数的定义，则派生类继续是抽象类
+直到派生类中给出了全部纯虚函数定义后，它才不再是抽象类，也才能实例化一个对象</p>
+</blockquote>
+<p>虚基类
+定义虚基类的一般格式如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">派生类名：</span><span style="color:#a6e22e">virtual</span> <span style="color:#960050;background-color:#1e0010">派生方式</span> <span style="color:#960050;background-color:#1e0010">基类名</span>
+{
+    <span style="color:#960050;background-color:#1e0010">派生类体</span>
+};
+</code></pre></div><h3 id="第七章-输入输出流">第七章 输入、输出流</h3>
+<p>流类简介</p>
+<p>常见头文件有以下三个</p>
+<ol>
+<li>iostream 包含操作所有输入/输出流所需的基本信息</li>
+<li>iomanip 包含格式化 I/O 的带参数流操纵符，可用于指定数据输入/输出的格式</li>
+<li>fstream 包含处理文件的有关信息，提供监理文件、读、写文件的各种操作接口</li>
+</ol>
+<p>标准流对象
+C++在头文件 iostream 中为用户预定义了 4 个标准流对象</p>
+<ol>
+<li>cin(标准输入流)</li>
+<li>cout(标准输出流)</li>
+<li>cerr(非缓冲错误输出流)</li>
+<li>clog(缓冲错误输出流)</li>
+</ol>
+<p>流操作符</p>
+<p>进制数与前缀</p>
+<ul>
+<li>十六进制常量——前缀 0x</li>
+<li>十进制常量——无前后缀</li>
+<li>八进制常量——前缀 0</li>
+<li>长整型常量——后缀 L 或 l</li>
+</ul>
+<p>iostream 中常用流操纵符</p>
+<ul>
+<li>endl 输出一个新行符，并清空流</li>
+<li>ends 输出字符串结束，并清空流</li>
+<li>flush 清空流缓冲区</li>
+<li>dec * 以十进制形式输入或输出整数</li>
+<li>hex 以十六进制形式输入或输出整数</li>
+<li>oct 以八进制形式输入或输出整数</li>
+<li>ws 提取空白字符</li>
+</ul>
+<p>常用的用于格式控制的流操纵符</p>
+<ol>
+<li>setw() 函数用于设置字段的宽度</li>
+<li>setprecision() 设置数值的精度(四舍五入)</li>
+<li>setfill() 设置填充字符为ch</li>
+<li>setbase() 设置数值的基本数为base</li>
+</ol>
+<p>调用 <code>cin</code> 的成员函数</p>
+<ul>
+<li>get()函数：此函数从输入流中读入一个字符（包括空白字符)，返回值就是该字符的 ASCII 码。</li>
+<li>getline()函数：是从输入流中的当前字符开始读取 bufSize-1 个字符到缓冲区 buf，或读到’\n’为止（哪个条件先满足即按哪个执行）。</li>
+<li>eof()函数：用于判断输入流是否已经结束。返回值为 true 表示输入结束。</li>
+<li>ignore()函数：作用是跳过输入流中的 n 个字符。</li>
+</ul>
+<p>第八章 文件操作</p>
+<p>C++根据文件数据的编码方式不同分为<code>文本文件</code>和<code>二进制文件</code>。</p>
+<p>根据存取方式不同分为<code>顺序存取文件</code>和<code>随机存取文件</code>。</p>
+<p>对文件的基本操作分为读文件和写文件。</p>
+<p>所谓“读文件”就是将文件中的数据读入内存之中，也称为“输入”。
+所谓“写文件”就是将内存中的数据存入文件之中，也称为“输出”。</p>
+<p>C++标准类库中有 3 个流类可以用于文件操作，这 3 个类统称为文件流类，分别是</p>
+<ol>
+<li>ifstream 用于从文件中读取数据</li>
+<li>ofstream 用于项文件中写入数据</li>
+<li>fstream 既可用于从文件中读取数据，又可用于向文件中写入数据。</li>
+</ol>
+<p>使用这三个流类时，需要在头部包含<code>fstream</code>头文件</p>
+<p>使用文件的步骤：</p>
+<ol>
+<li>打开文件（open）</li>
+<li>操作文件</li>
+<li>关闭文件（close）</li>
+</ol>
+<p>打开文件的目的</p>
+<ol>
+<li>建立关联 通过指定文件名，建立起文件和文件流对象的关联。</li>
+<li>指明文件的使用方式和文件格式。</li>
+</ol>
+<p>打开文件的方式的格式
+<code>流类名 对象名(文件名,模式); （1）模式： ios::in ：以读方式打开文件。 ios::out ：以写方式打开文件。 ios::in | ios::out：既可读取其内容，也可向其写入数据。 （2）文件名 其中“\\”是 C++的转义字符，代表路径中的一个“\”。故打开文件&quot;d:\file.dat&quot; 的表示方式为：&quot;d:\\file.dat&quot;。</code></p>
+<p>使用 fstream 中的成员函数 close()关闭文件。</p>
+<p>读写二进制文件</p>
+<ul>
+<li>用 ostream::write()成员函数写文件</li>
+<li>用 istream::read()成员函数读文件</li>
+<li>用 ostream::gcount()成员函数得到读取字节数</li>
+</ul>
+<p>读写文本文件：</p>
+<ul>
+<li>成员函数 put()向文件中一次写入一个字节。</li>
+<li>成员函数 get()从文件中一次读取一个字节。</li>
+</ul>
+<p>随机访问文件</p>
+<ol>
+<li>成员函数 seekg()，可以设置文件读指针的位置。</li>
+<li>成员函数 seekp()，可以设置文件的写指针位置。</li>
+</ol>
+<h3 id="第九章">第九章</h3>
+<p>函数模板</p>
+<p>定义</p>
+<blockquote>
+<p>函数在设计时并不使用实际的类型，而是使用虚拟的类型参数。这样可
+以不必为每种不同的类型都编写代码段。当用实际的类型来实例化这种函数时，将
+函数模板与某个具体数据类型连用。即这个通用函数就是函数模板。</p>
+</blockquote>
+<p>模板函数</p>
+<blockquote>
+<p>编译器将以函数模板为样板，生成一个函数，即产生了模板函数，这个
+过程称为函数模板实例化。模板函数的真正代码是在源程序中调用函数时产生</p>
+</blockquote>
+<p>定义函数模板的一般格式如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">模板参数表</span><span style="color:#f92672">&gt;</span>
+<span style="color:#960050;background-color:#1e0010">返回类型名</span> <span style="color:#960050;background-color:#1e0010">函数模板名</span>(<span style="color:#960050;background-color:#1e0010">参数表</span>)
+{
+    <span style="color:#960050;background-color:#1e0010">函数体的定义</span>
+}
+</code></pre></div><p>其中 模板参数表：</p>
+<blockquote>
+<p>由用逗号分隔的模板参数构成，形式是“类型 参数名,类型 参数
+名,……”。如果是一个类型，则需要使用 typename 或 class 关键字来表示参数的类
+型，一般选用 T 作为标识符来标识类型参数。</p>
+</blockquote>
+<ol>
+<li>调用函数模板时，不进行实参到形参类型的自动转换。同一个类型参数只能替换为同一种类型。应保持参数类型一致。</li>
+</ol>
+<p>函数模板与函数的区别：</p>
+<ul>
+<li>函数模板本身在编译时不会生成任何目标代码，只有当通过模板生成具体的函数实例时才会生成目标代码。</li>
+<li>被多个源文件引用的函数模板，应当连同函数体一同放在头文件中，而不能像普通函数那样只将声明放在头文件中。</li>
+<li>函数指针也只能指向模板的实例，而不能指向模板本身。</li>
+</ul>
+<p>在函数和函数模板名字相同的情况下，C++编译器遵循以下先后顺序：</p>
+<ol>
+<li>先找参数完全匹配的普通函数（不是由模板实例化得到的模板函数）。</li>
+<li>再找参数完全匹配的模板函数。</li>
+<li>然后找实参经过<strong>自动类型转换</strong>后能够匹配的普通函数。</li>
+<li>如果上面的都找不到，则报错。</li>
+</ol>
+<p>类模板</p>
+<blockquote>
+<p>使用类模板，用户可以为类定义一种模式，使得类中的某些成员变量、默认成员函
+数的参数、某些成员函数的返回值及局部变量能取任意类型，既可以是系统预定义
+的类型，也可以是用户自定义的类型。通过类模板，可以实例化一个个的类。</p>
+</blockquote>
+<p>模板类：由类模板实例化得到的模板类</p>
+<p>编译器由类模板生成类的过程称为<strong>类模板的实例化</strong></p>
+<p>由类模板实例化得到的类称为<strong>模板类</strong></p>
+<p>类模板声明的一般方法为：<code>template&lt;类模板参数&gt;class 类名{//类体};</code></p>
+<p>用类模板定义对象的一般格式
+<code>类模板名 &lt;模板参数表&gt; 对象名 1,…,对象名 n; 类模板名 &lt;模板参数表&gt; 对象名 1(构造函数实参),…,对象名 n(构造函数实参);</code></p>
+<p>类模板与继承</p>
+<p>类之间允许继承，类模板之间也允许继承
+具体来说，类模板和类模板之间、类模板和类之间可以相互继承，它们之间的常见派生关系有以下四种情况：</p>
+<ol>
+<li>普通类继承模板类</li>
+<li>类模板继承普通类</li>
+<li>类模板继承类模板</li>
+<li>类模板继承模板类</li>
+</ol>
+<p>根据模板实例化的类称为<strong>模板类</strong></p>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">chosen1cwp</a> with
+    <a href="https://github.com/chosen1cwp">Github Home</a>.
+</div>
+
+    </div>
+  </body>
+</html>

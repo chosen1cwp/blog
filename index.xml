@@ -7,10 +7,216 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>©2020 chosen1cwp.</copyright>
-<<<<<<< HEAD
-    <lastBuildDate>Fri, 26 Mar 2021 22:19:28 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Jul 2021 16:50:15 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>线性表</title>
+      <title>照片变素描艺术照测试</title>
+      <link>https://blog.chosen1cwp.com/posts/photo_to_sketch_art_photo/</link>
+      <pubDate>Fri, 16 Jul 2021 16:50:15 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/photo_to_sketch_art_photo/</guid>
+      <description>浏览GitHub时，无意间看到一个照片变素描的项目后，在好奇心的驱使，clone 了项目在本机跑起来，就是站在巨人的肩头看看新世界~~ 看了项目</description>
+    </item>
+    
+    <item>
+      <title>常见web攻击方法及防御手段简要总结</title>
+      <link>https://blog.chosen1cwp.com/posts/web_attack_desc/</link>
+      <pubDate>Fri, 16 Jul 2021 16:45:54 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/web_attack_desc/</guid>
+      <description>1. CSRF （cross-site request forgery）跨站请求伪造 利用cookie，用户本地存储cookie，攻击者利用用户的cookie进行认证，然</description>
+    </item>
+    
+    <item>
+      <title>Tomact配置域名HTTPS访问</title>
+      <link>https://blog.chosen1cwp.com/posts/tomcat_config/</link>
+      <pubDate>Fri, 16 Jul 2021 16:26:14 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/tomcat_config/</guid>
+      <description>接手公司一个人管系统的项目，一直都是IP+port在访问，极不不方便记忆，且近期业务需要通过等级保护认证，必须满足等保三级认证的要求，所以有</description>
+    </item>
+    
+    <item>
+      <title>创业</title>
+      <link>https://blog.chosen1cwp.com/posts/startabusiness/</link>
+      <pubDate>Mon, 19 Apr 2021 14:13:56 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/startabusiness/</guid>
+      <description>创业，是很多人的梦想。 不知道多少人在上班不开心的时候，都曾幻想过自己创业当老板，然后每天只需要躺着收钱就好了。 当然，创业风险很大，亏钱的概率</description>
+    </item>
+    
+    <item>
+      <title>第八章 数据管理技术的发展</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter8/</link>
+      <pubDate>Fri, 09 Apr 2021 13:00:38 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>第七章 数据库应用设计与开发实例</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter7/</link>
+      <pubDate>Fri, 09 Apr 2021 13:00:34 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>第六章 数据库安全与保护</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter6/</link>
+      <pubDate>Fri, 09 Apr 2021 13:00:31 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>第五章 数据库编程</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter5/</link>
+      <pubDate>Fri, 09 Apr 2021 13:00:28 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>第四章 SQL与关系数据库基本操作</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter4/</link>
+      <pubDate>Fri, 09 Apr 2021 13:00:05 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter4/</guid>
+      <description>SQL 结构化查询语言（Structured Query Language，SQL）是专门用来与数据库通信的语言，它可以帮助用户操作关系数据库。 特点： SQL不</description>
+    </item>
+    
+    <item>
+      <title>第三章 数据库设计</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter3/</link>
+      <pubDate>Fri, 09 Apr 2021 13:00:02 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter3/</guid>
+      <description>第一范式 1NF 设R为任一给定关系，如果R中每个 列与行交点处的 取值 都是 不可再分的基本元素，则R为第一范式 第二范式 2NF 设R为任一给定关系，若R为1NF</description>
+    </item>
+    
+    <item>
+      <title>第二章 关系数据库</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter2/</link>
+      <pubDate>Fri, 09 Apr 2021 12:59:59 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter2/</guid>
+      <description>关系数据库的产生历史 1970年 IBM 提出了关系模型，奠定了关系数据库的理论基础 20世纪70年代末（1975~1980）关系方法理论研究和软件系统</description>
+    </item>
+    
+    <item>
+      <title>第一章 数据库系统概述</title>
+      <link>https://blog.chosen1cwp.com/database_system/chapter1/</link>
+      <pubDate>Fri, 09 Apr 2021 12:59:00 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/database_system/chapter1/</guid>
+      <description>数据 数据（Data）是描述事物的符号记录，是指利用物理符号记录下来的、可以鉴别的信息。 数据的语义：数据是信息存在的一种形式，只有通过解释或处</description>
+    </item>
+    
+    <item>
+      <title>人生的困局</title>
+      <link>https://blog.chosen1cwp.com/posts/thedilemmaoflife/</link>
+      <pubDate>Wed, 07 Apr 2021 18:05:24 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/thedilemmaoflife/</guid>
+      <description>小镇做题家的困局，为啥有才华的人却爬不上去 “小镇做题家”这个词火了，一般说的是那些出身小城，擅长应试，进而通过高考跻身知名大学。可是在此之后</description>
+    </item>
+    
+    <item>
+      <title>Chapter9</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter9/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:38 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chapter8</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter8/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:33 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chapter7</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter7/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:28 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chapter6</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter6/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:25 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chapter5</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter5/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:19 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chapter4</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter4/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:16 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chapter3</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter3/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:12 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>密训资料</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter2/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:08 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter2/</guid>
+      <description>const 与 指针 共同使用 如果唯一的const 位于符号 * 的左侧，表示 指针所指数据是常量，数据不同通过本指针改变，但可以通过其他方式改变，指针本身是变量</description>
+    </item>
+    
+    <item>
+      <title>第一章 C&#43;&#43;语言简介</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter1/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:01 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter1/</guid>
+      <description>c++语言发展简史 c语言是c++的前身，在进一步扩充和完善c语言的基础上得到了c++语言。 程序设计语言分类： 低级语言 机器语言，依赖于CPU的</description>
+    </item>
+    
+    <item>
+      <title>第三章 栈、队列和数组</title>
+      <link>https://blog.chosen1cwp.com/data_structure/chapter3/</link>
+      <pubDate>Sat, 03 Apr 2021 13:03:58 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/data_structure/chapter3/</guid>
+      <description>概述 数据结构是指一组相互之间存在一种或多种特性关系的数据组织方式和它们在计算机内的存储方式，以及定义在改组数据上的一组操作，合理的数据结构可</description>
+    </item>
+    
+    <item>
+      <title>第二章 线性表</title>
       <link>https://blog.chosen1cwp.com/data_structure/chapter2/</link>
       <pubDate>Fri, 26 Mar 2021 22:19:28 +0800</pubDate>
       
@@ -25,20 +231,6 @@
       
       <guid>https://blog.chosen1cwp.com/data_structure/chapter1/</guid>
       <description>概述 数据结构是指一组相互之间存在一种或多种特性关系的数据组织方式和它们在计算机内的存储方式，以及定义在改组数据上的一组操作，合理的数据结构可</description>
-=======
-    <lastBuildDate>Mon, 19 Apr 2021 14:13:56 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.chosen1cwp.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>创业</title>
-      <link>https://blog.chosen1cwp.com/posts/startabusiness/</link>
-      <pubDate>Mon, 19 Apr 2021 14:13:56 +0800</pubDate>
-      
-      <guid>https://blog.chosen1cwp.com/posts/startabusiness/</guid>
-      <description>创业，是很多人的梦想。 不知道多少人在上班不开心的时候，都曾幻想过自己创业当老板，然后每天只需要躺着收钱就好了。 当然，创业风险很大，亏钱的概率</description>
->>>>>>> 250c8236eeb5cce393b1e029d3f186863bf3e34a
     </item>
     
     <item>
@@ -150,7 +342,7 @@
     </item>
     
     <item>
-      <title>四大险种之一意外险</title>
+      <title>四大险种-意外险</title>
       <link>https://blog.chosen1cwp.com/posts/%E5%9B%9B%E5%A4%A7%E9%99%A9%E7%A7%8D%E4%B9%8B%E4%B8%80%E6%84%8F%E5%A4%96%E9%99%A9/</link>
       <pubDate>Wed, 30 Dec 2020 17:01:54 +0800</pubDate>
       
@@ -168,7 +360,6 @@
     </item>
     
     <item>
-<<<<<<< HEAD
       <title>Auto.js实现自动收取蚂蚁森林能量</title>
       <link>https://blog.chosen1cwp.com/posts/auto.js%E5%AE%9E%E7%8E%B0android%E6%89%8B%E6%9C%BA%E6%94%B6%E5%8F%96%E8%9A%82%E8%9A%81%E6%A3%AE%E6%9E%97%E8%83%BD%E9%87%8F/</link>
       <pubDate>Wed, 23 Dec 2020 14:35:58 +0800</pubDate>
@@ -196,8 +387,6 @@
     </item>
     
     <item>
-=======
->>>>>>> 250c8236eeb5cce393b1e029d3f186863bf3e34a
       <title>Iphone12验机</title>
       <link>https://blog.chosen1cwp.com/posts/iphone12%E9%AA%8C%E6%9C%BA/</link>
       <pubDate>Tue, 15 Dec 2020 16:00:59 +0800</pubDate>
@@ -230,7 +419,7 @@
       <pubDate>Mon, 28 Sep 2020 19:46:07 +0800</pubDate>
       
       <guid>https://blog.chosen1cwp.com/posts/one_time_work/</guid>
-      <description>一次性工作 每次看到 IT 公司的招聘广告，我往往有一种感觉，很多工作是一次性工作。所谓&amp;rdquo; 一次性工作&amp;rdquo;，就是企业用完人之后，</description>
+      <description>一次性工作 每次看到 IT 公司的招聘广告，我往往有一种感觉，很多工作是一次性工作。所谓&amp;quot; 一次性工作&amp;quot;，就是企业用完人之后，就会</description>
     </item>
     
     <item>
@@ -257,7 +446,7 @@
       <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.chosen1cwp.com/photos/warsaw-poland/</guid>
-      <description>文化科学宫 &amp;gt; 是波兰华沙市中心一座著名的高层建筑。它的总高度为237米（778英尺），是波兰最高的建筑，欧盟第五高楼（包括塔尖），也是欧洲大陆</description>
+      <description>文化科学宫 是波兰华沙市中心一座著名的高层建筑。它的总高度为237米（778英尺），是波兰最高的建筑，欧盟第五高楼（包括塔尖），也是欧洲大陆最</description>
     </item>
     
     <item>
@@ -302,7 +491,7 @@
       <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.chosen1cwp.com/photos/panaji-india-2/</guid>
-      <description>帕纳吉 &amp;gt; 原名潘吉姆，是印度果阿州首府和北果阿区总部。它位于Ilhas de Goa分区（taluka）的Mandovi河口岸边。潘吉姆是果阿最大的</description>
+      <description>帕纳吉 原名潘吉姆，是印度果阿州首府和北果阿区总部。它位于Ilhas de Goa分区（taluka）的Mandovi河口岸边。潘吉姆是果阿最大的城</description>
     </item>
     
     <item>

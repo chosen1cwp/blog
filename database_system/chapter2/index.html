@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chosen1cwp&#39;s Blog/database_system/chapter2/</title>
+    <meta name="description" content="chosen1cwp 的个人博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/terminal-0.7.1.min.css">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/animate-3.7.2.min.css">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="第二章 关系数据库" />
+<meta property="og:description" content="chosen1cwp 的个人博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.chosen1cwp.com/database_system/chapter2/" /><meta property="article:published_time" content="2021-04-09T12:59:59+08:00" />
+
+
+
+<meta name="twitter:title" content="第二章 关系数据库"/>
+<meta name="twitter:description" content="关系数据库的产生历史 1970年 IBM 提出了关系模型，奠定了关系数据库的理论基础 20世纪70年代末（1975~1980）关系方法理论研究和软件系统"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://blog.chosen1cwp.com/" class="no-style site-name">Chosen1cwp&#39;s Blog</a>:~# 
+              <a href='https://blog.chosen1cwp.com/database_system'>database_system</a>/<a href='https://blog.chosen1cwp.com/database_system/chapter2'>chapter2</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://blog.chosen1cwp.com/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://blog.chosen1cwp.com/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://blog.chosen1cwp.com/photos/" typeof="ListItem">photos/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast">
+        
+<h1>第二章 关系数据库</h1>
+<h3 id="关系数据库的产生历史">关系数据库的产生历史</h3>
+<ul>
+<li>
+<p>1970年 IBM 提出了关系模型，奠定了关系数据库的理论基础</p>
+</li>
+<li>
+<p>20世纪70年代末（1975~1980）关系方法理论研究和软件系统的研制取得了重大突破</p>
+</li>
+<li>
+<p>1981年 出现了比较成熟的关系数据库技术，证实了关系数据库的优点：高级的非过程语言接口、较好的数据独立性</p>
+</li>
+<li>
+<p>20世纪80年代后（1990往后）网状模型和层次模型与底层实现的结合紧密，关系模型具有坚实理论基础，称为主流数据模型</p>
+</li>
+</ul>
+<h3 id="关系数据模型">关系数据模型</h3>
+<p>关系数据模型的组成要素：</p>
+<ul>
+<li>关系数据结构</li>
+<li>关系操作集合</li>
+<li>关系完整性约束</li>
+</ul>
+<h4 id="关系数据结构-表table">关系数据结构 表（table）</h4>
+<p><img src="http://static.chosen1cwp.com/WechatIMG1046.jpeg" alt="关系数据结构"></p>
+<blockquote>
+<p>表（table）也称关系，是一个二维的数据结构，由表名、列、若干行数据组成。
+每个表有唯一的表名，表中每一行数据描述一条具体的记录值
+一个关系逻辑上对应一张二维表，可以为每个关系取一个名称进行标示
+关系(Relation) == 表</p>
+</blockquote>
+<p>关系的三种类型</p>
+<ul>
+<li>基本关系（基本表、基表）</li>
+<li>查询表</li>
+<li>视图表</li>
+</ul>
+<p>列（Column）</p>
+<blockquote>
+<p>也称为字段（Field）或属性（Attribute）列名、字段名、属性名
+数据类型相同
+同一个表中字段名必须唯一，不能出现相同的字段名
+属性的个数成为关系的元、度
+列的值称为属性值，其取值范围称为值域</p>
+</blockquote>
+<p>行（Row）</p>
+<blockquote>
+<p>也称元组（Tuple）或记录（Record）
+表中的数据按行存储
+分量（Component）= 具体的数据项
+元组中的一个属性值，称为分量</p>
+</blockquote>
+<p><img src="http://static.chosen1cwp.com/WechatIMG108.jpeg" alt="表中各个概念"></p>
+<p>码或键（Key）</p>
+<blockquote>
+<p>属性（或属性组）的值都能用来唯一标识该关系的元组，则称这些属性（或属性组）为该关系的码或者键</p>
+</blockquote>
+<p>超码或超键（Super Key）</p>
+<blockquote>
+<p>在码中去除某个属性，它仍然是这个关系的码</p>
+</blockquote>
+<p>候选码或候选键（Candidate Key）</p>
+<blockquote>
+<p>在码中不能移去任何一个属性，否则他就不再是这个关系的码或者键
+候选码或候选键是这个关系的最小超码或超键</p>
+</blockquote>
+<p>主属性或非主属性</p>
+<blockquote>
+<p>包含在任何一个候选码中的属性称为主属性或码属性</p>
+</blockquote>
+<p>主码或主键（Primary Key）</p>
+<blockquote>
+<p>在关系中的若干个候选码中指定一个唯一标识关系的元组（行）</p>
+</blockquote>
+<p>全码或全键（All Key）</p>
+<blockquote>
+<p>一个关系模式的所有属性集合是这个关系的主码或主键，这样的主码或主键称为全码或全键</p>
+</blockquote>
+<p>外码或外键（Foreign Key）</p>
+<blockquote>
+<p>某个属性（属性组）不是这个关系的主码或候选码，而是另一个关系的主码</p>
+</blockquote>
+<p>参照关系和被参照关系，是指以外码相关联的两个关系</p>
+<ul>
+<li>参照关系，从关系</li>
+<li>被参照关系，主关系</li>
+</ul>
+<p><img src="http://static.chosen1cwp.com/WechatIMG109.jpeg" alt="参照关系与被参照关系"></p>
+<p>域（Domain）</p>
+<blockquote>
+<p>表示属性的取值范围</p>
+</blockquote>
+<p>数据类型（Data Type）</p>
+<blockquote>
+<p>每个列都有相应的数据类型，它用于限制（或容许）该列中存储的数据
+字符型、日期型、整型</p>
+</blockquote>
+<p>关系模式（Relation Schema）</p>
+<blockquote>
+<p>关系模式是型（type）,关系是值（value），即关系模式是对关系的描述
+关系模式 = 表头
+关系模式是静态的、稳定的
+关系是动态的，随时间不断变化的</p>
+</blockquote>
+<p>关系数据库（Relation Database）</p>
+<blockquote>
+<p>所有关系的集合，构成一个关系数据库
+以关系模型作为数据的逻辑模型，并采用关系作为数据组织方式的一类数据库，其数据库操作建立在关系代数的基础上</p>
+</blockquote>
+<p>关系数据库对关系的限定、要求：</p>
+<ul>
+<li>每一个属性都是不可分解的（不允许表中有表）</li>
+<li>每一个关系仅仅有一种关系模式</li>
+<li>每一个关系模式中的属性必须命名，属性名不同</li>
+<li>同一个关系中不允许出现候选码或候选键值完全相同的元组</li>
+<li>在关系中元组的顺序（即行序）是无关紧要的，可以任意交换</li>
+<li>在关系中属性的顺序（即列序）是无关紧要的，可以任意交换</li>
+</ul>
+<h3 id="基本的关系操作">基本的关系操作</h3>
+<ul>
+<li>查询
+<ul>
+<li>选择</li>
+<li>投影</li>
+<li>并</li>
+<li>差</li>
+<li>笛卡尔积</li>
+</ul>
+</li>
+<li>插入</li>
+<li>删除</li>
+<li>修改</li>
+</ul>
+<p>关系数据语言的分类</p>
+<ul>
+<li>关系代数语言</li>
+<li>关系演算语言
+<ul>
+<li>元祖关系演算</li>
+<li>域关系演算</li>
+</ul>
+</li>
+<li>结构化查询语言 SQL
+<ul>
+<li>具有完备的表达能力</li>
+<li>是非过程化的集合操作语言</li>
+<li>功能强，能够独立使用也可以嵌入高级语言中使用</li>
+</ul>
+</li>
+</ul>
+<p>关系代数运算符</p>
+<p>任何一种操作包含三大要素：</p>
+<ul>
+<li>操作对象</li>
+<li>操作符</li>
+<li>操作结果</li>
+</ul>
+<p>传统的集合运算：并、差、交、笛卡尔积</p>
+<p>并（UNION）R3 = R1 U R2
+<img src="http://static.chosen1cwp.com/WechatIMG110.jpeg" alt="并"></p>
+<p>差（DIFFERENCE）R3 = R1 - R2
+<img src="http://static.chosen1cwp.com/WechatIMG111.jpeg" alt="差"></p>
+<p>交（INTERSECTION）R3 = R1 n R2
+<img src="http://static.chosen1cwp.com/WechatIMG112.jpeg" alt="交"></p>
+<p>笛卡尔积（CARTESIAN PRODUCT）R3 = R1 ✖️ R2
+<img src="http://static.chosen1cwp.com/WechatIMG113.jpeg" alt="笛卡尔积"></p>
+<h3 id="专门的关系运算">专门的关系运算</h3>
+<p>选择（SELECT） σF（R）
+<code>SELECT  关系名  WHERE  条件</code>
+<img src="http://static.chosen1cwp.com/WechatIMG114.jpeg" alt="选择"></p>
+<p>投影（PROJECTION）：πA（R） 垂直分解
+<code>PROJECTION  关系名 （属性名1，属性名2，…，属性名n）</code>
+<img src="http://static.chosen1cwp.com/WechatIMG115.jpeg" alt="投影"></p>
+<p>连接（JOIN），也称θ连接
+<code>JOIN  关系名 1  AND  关系名 2  WHERE  条件</code>
+<img src="http://static.chosen1cwp.com/WechatIMG116.jpeg" alt="连接"></p>
+<p>除（DIVISION）：R÷S
+<img src="http://static.chosen1cwp.com/WechatIMG117.jpeg" alt="连接"></p>
+<h3 id="关系的完整性约束">关系的完整性约束</h3>
+<p>数据库的数据完整性是指数据库中数据的 正确性、相容性、一致性</p>
+<ul>
+<li>实体完整性约束
+<ul>
+<li>主码的组成不能为空，主属性不能是空值null</li>
+</ul>
+</li>
+<li>参照完整性约束
+<ul>
+<li>定义外码和主码之间的引用规则</li>
+<li>要么外码等于主码中的某个元祖的主码值，要么为空值null</li>
+</ul>
+</li>
+<li>用户定义完整性约束
+<ul>
+<li>域 完整性约束（针对某一应用环境的完整性约束）、其他</li>
+</ul>
+</li>
+</ul>
+<p>执行插入操作的检验</p>
+<ol>
+<li>检查实体完整性约束</li>
+<li>检查参照关系完整性约束</li>
+<li>检查永不定义完整性约束</li>
+</ol>
+<p>执行删除操作的检验</p>
+<p>一般指需要对被参照关系检查参照完整性约束</p>
+<p>执行更新操作的检验</p>
+<p>上面两种情况的综合</p>
+<h3 id="数据库的规范化理论">数据库的规范化理论</h3>
+<h4 id="关系模式中可能存在的冗余和异常问题">关系模式中可能存在的冗余和异常问题</h4>
+<ol>
+<li>数据冗余 指统一数据被反复存储的情况</li>
+<li>更新异常 数据冗余造成的，多个内容更改使操作错误</li>
+<li>插入异常</li>
+<li>删除异常</li>
+</ol>
+<p>函数依赖与关键字</p>
+<p>函数依赖</p>
+<blockquote>
+<p>关系中属性间的对应关系</p>
+</blockquote>
+<p>设R为任一给定关系，如果对于R中属性X的每一个值，R中的属性Y只有唯一值与之对应，则称X函数决定Y或者Y函数依赖于X,记做：<code>X-&gt;Y</code>,其中X称为<strong>决定因素</strong></p>
+<p>对于关系R中的属性X和Y，若X不能函数决定Y，记作X-/-&gt;Y</p>
+<p>分类：</p>
+<ul>
+<li>完全函数依赖</li>
+<li>部分函数依赖</li>
+<li>传递函数依赖</li>
+</ul>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">chosen1cwp</a> with
+    <a href="https://github.com/chosen1cwp">Github Home</a>.
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chosen1cwp&#39;s Blog/database_system/chapter4/</title>
+    <meta name="description" content="chosen1cwp 的个人博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/terminal-0.7.1.min.css">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/animate-3.7.2.min.css">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="第四章 SQL与关系数据库基本操作" />
+<meta property="og:description" content="chosen1cwp 的个人博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.chosen1cwp.com/database_system/chapter4/" /><meta property="article:published_time" content="2021-04-09T13:00:05+08:00" />
+
+
+
+<meta name="twitter:title" content="第四章 SQL与关系数据库基本操作"/>
+<meta name="twitter:description" content="SQL 结构化查询语言（Structured Query Language，SQL）是专门用来与数据库通信的语言，它可以帮助用户操作关系数据库。 特点： SQL不"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://blog.chosen1cwp.com/" class="no-style site-name">Chosen1cwp&#39;s Blog</a>:~# 
+              <a href='https://blog.chosen1cwp.com/database_system'>database_system</a>/<a href='https://blog.chosen1cwp.com/database_system/chapter4'>chapter4</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://blog.chosen1cwp.com/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://blog.chosen1cwp.com/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://blog.chosen1cwp.com/photos/" typeof="ListItem">photos/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast">
+        
+<h1>第四章 SQL与关系数据库基本操作</h1>
+<h3 id="sql">SQL</h3>
+<blockquote>
+<p>结构化查询语言（Structured Query Language，SQL）是专门用来与数据库通信的语言，它可以帮助用户操作关系数据库。</p>
+</blockquote>
+<p>特点：</p>
+<ul>
+<li>SQL不是某个特定数据库供应商专有的语言</li>
+<li>SQL简单易学</li>
+<li>SQL强大、灵活，可以进行非常复杂和高级的数据库操作</li>
+</ul>
+<p>SQL的组成</p>
+<ul>
+<li>数据查询</li>
+<li>数据定义语言
+<ul>
+<li>CREATE 创建数据库、数据库对象</li>
+<li>ALTER 对数据库、数据库对象进行修改</li>
+<li>DROP 删除数据库、数据库对象</li>
+</ul>
+</li>
+<li>数据操纵语言
+<ul>
+<li>SELECT 从表或视图中检索数据</li>
+<li>INSERT 将数据插入到表或视图中</li>
+<li>UPDATE 修改表或视图中的数据</li>
+<li>DELETE 从表或视图中删除数据</li>
+</ul>
+</li>
+<li>数据控制语言
+<ul>
+<li>GRANT 用于授予权限</li>
+<li>REVOKE 用于收回权限</li>
+</ul>
+</li>
+</ul>
+<p>SQL调用和会话规则</p>
+<ul>
+<li>SQL例程</li>
+<li>调用规则</li>
+</ul>
+<h3 id="mysql使用基础">MySQL使用基础</h3>
+<blockquote>
+<p>是一种 关系数据库系统（RDBMS）
+优点：体积小、速度快、开放源代码、遵循GPL</p>
+</blockquote>
+<h4 id="常量">常量</h4>
+<ul>
+<li>字符串常量</li>
+<li>数值常量</li>
+<li>十六进制常量</li>
+<li>时间日期常量</li>
+<li>位字段值</li>
+<li>布尔值</li>
+<li>NULL值</li>
+</ul>
+<h4 id="变量">变量</h4>
+<ul>
+<li>用户变量 常加一个符号@，用于将其与列名区分开</li>
+<li>系统变量 系统变量应用于其他SQL语句中时，必须在系统变量前添加两个@</li>
+</ul>
+<h4 id="运算符">运算符</h4>
+<ul>
+<li>算术运算符	+（加）、-（减）、*（乘）、/（除）、%（求模）</li>
+<li>位运算符 &amp;（位与）、|（位或）、^（位异或）、~（位取反）、&raquo;（位右移）、&laquo;（位左移）</li>
+<li>比较运算符 =（等于）、&gt;（大于）、&lt;（小于）、&gt;=（大于等于）、&lt;=（小于等于）、&lt;&gt;（不等于）、！=（不等于）、&lt;=&gt;（相等或都等于空）</li>
+<li>逻辑运算符 NOT或！（逻辑非）、AND或&amp;&amp;（逻辑与）、OR或||（逻辑或）、XOR（逻辑异或）</li>
+</ul>
+<h4 id="mysql扩展语言要素">MySQL扩展语言要素</h4>
+<h5 id="表达式">表达式</h5>
+<blockquote>
+<p>表达式是 常量、变量、列名、复杂计算、运算符合函数的组合</p>
+</blockquote>
+<ul>
+<li>字符型表达式</li>
+<li>数值型表达式</li>
+<li>日期表达式</li>
+</ul>
+<h5 id="内置函数">内置函数</h5>
+<ul>
+<li>数学函数	ABS()……</li>
+<li>聚合函数	COUNT()……</li>
+<li>字符串函数	ASCⅡ()……</li>
+<li>日期和时间函数	NOW()……</li>
+<li>加密函数	ENCODE()……</li>
+<li>控制流程函数	IF()……</li>
+<li>格式化函数	FORMAT()……</li>
+<li>类型转换函数	CAST()……</li>
+<li>系统信息函数	USER()……</li>
+</ul>
+<h3 id="数据定义">数据定义</h3>
+<h4 id="创建数据库">创建数据库</h4>
+<p>使用CREATE DATABASE \ CREATE SCHEMA 语句</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">DATABASE</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">SCHEMA</span><span style="color:#960050;background-color:#1e0010">}</span> [<span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span>] db_name
+    [<span style="color:#66d9ef">DEFAULT</span>]CHARACTER <span style="color:#66d9ef">SET</span>[<span style="color:#f92672">=</span>]charset_name
+    <span style="color:#f92672">|</span>[<span style="color:#66d9ef">DEFAULT</span>]<span style="color:#66d9ef">COLLATE</span>[<span style="color:#f92672">=</span>]<span style="color:#66d9ef">collation_name</span>
+</code></pre></div><p>[]内容为可选项，|用于分隔花括号中的选择项</p>
+<ul>
+<li>IF NOT EXISTS 创建数据库前进行判断</li>
+<li>db_name 标示具体的数据库命名</li>
+<li>DEFAULT 指定默认值</li>
+<li>CHARACTER SET 指定数据库字符集（Charset）</li>
+<li>COLLATE 指定字符集的校对规则</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">mysql<span style="color:#f92672">&gt;</span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> mysql_test;
+Query OK,<span style="color:#ae81ff">1</span> <span style="color:#66d9ef">row</span> affected(<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">30</span> sec)
+</code></pre></div><h4 id="查看数据库">查看数据库</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SHOW</span> <span style="color:#960050;background-color:#1e0010">{</span>DATABASES <span style="color:#f92672">|</span> SCHEMAS<span style="color:#960050;background-color:#1e0010">}</span>
+    [<span style="color:#66d9ef">LIKE</span><span style="color:#960050;background-color:#1e0010">’</span>pattern<span style="color:#960050;background-color:#1e0010">’</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">WHERE</span> expr]
+</code></pre></div><ul>
+<li>Like关键字用于匹配指定的数据库名称；</li>
+<li>Where从句用于指定数据库名称查询范围的条件</li>
+</ul>
+<h4 id="选择数据库">选择数据库</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">USE db_name;
+</code></pre></div><p>从一个数据库“跳转”到另一个数据库</p>
+<h4 id="修改数据库">修改数据库</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">ALTER</span><span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">DATABASE</span><span style="color:#f92672">|</span><span style="color:#66d9ef">SCHEMA</span><span style="color:#960050;background-color:#1e0010">}</span>[db_name]
+          alter_specification<span style="color:#960050;background-color:#1e0010">…</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">mysql<span style="color:#f92672">&gt;</span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">DATABASE</span> mysql_test
+    <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">DEFAULT</span> CHARACTER <span style="color:#66d9ef">SET</span> gb2312
+    <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">DEFAULT</span> <span style="color:#66d9ef">COLLATE</span> gb2312_chinese_ci;
+</code></pre></div><h4 id="删除数据库">删除数据库</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">DROP</span><span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">DATABASE</span><span style="color:#f92672">|</span><span style="color:#66d9ef">SCHEMA</span><span style="color:#960050;background-color:#1e0010">}</span>[<span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span>]db_name
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">mysql<span style="color:#f92672">&gt;</span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">DATABASE</span> hahaha;
+    ERROR <span style="color:#ae81ff">1008</span>(HY000):Can<span style="color:#960050;background-color:#1e0010">’</span>t <span style="color:#66d9ef">drop</span> <span style="color:#66d9ef">database</span><span style="color:#960050;background-color:#1e0010">’</span>hahaha<span style="color:#960050;background-color:#1e0010">’</span>;<span style="color:#66d9ef">database</span> doesn<span style="color:#960050;background-color:#1e0010">’</span>t exist
+    mysql<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">DATABASE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> hahaha;
+    Query OK,<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">rows</span> affected,<span style="color:#ae81ff">1</span> warning(<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">00</span> sec)
+
+</code></pre></div><h4 id="创建表">创建表</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">mysql<span style="color:#f92672">&gt;</span>USE mysql_test;
+    <span style="color:#66d9ef">Database</span> changed
+    mysql<span style="color:#f92672">&gt;</span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> customers
+         <span style="color:#f92672">-&gt;</span>(
+         <span style="color:#f92672">-&gt;</span>  cust_id INT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> AUTO_INCREMENT,
+         <span style="color:#f92672">-&gt;</span>  cust_name CHAR(<span style="color:#ae81ff">50</span>)<span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+         <span style="color:#f92672">-&gt;</span>  cust_sex CHAR(<span style="color:#ae81ff">1</span>)<span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">DEFAULT</span> <span style="color:#ae81ff">0</span>,
+         <span style="color:#f92672">-&gt;</span>  cust_address CHAR(<span style="color:#ae81ff">50</span>)<span style="color:#66d9ef">NULL</span>,
+         <span style="color:#f92672">-&gt;</span>  cust_contact CHAR(<span style="color:#ae81ff">50</span>)<span style="color:#66d9ef">NULL</span>,
+         <span style="color:#f92672">-&gt;</span>  <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>(cust_id)
+         <span style="color:#f92672">-&gt;</span>);
+    Query OK,<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">rows</span> affected(<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">11</span> sec)
+
+</code></pre></div><h4 id="更新表">更新表</h4>
+<blockquote>
+<p>使用ALTER TABLE语句，增加或删减列、创建或取消索引、更改原有列的数据类型、重新命名列或表，更改表的评注和表的引擎类型，为表重新创建触发器、存储过程、索引和外键等。</p>
+</blockquote>
+<ul>
+<li>ADD[COLUMN]子句</li>
+<li>CHANGE[COLUMN]子句 修改表中列的名称或数据类型</li>
+<li>ALTER[COLUMN]子句 修改或删除表中指定列的默认值</li>
+<li>MODIFY[COLUMN]子句 只修改指定列的数据类型，不会干涉它的列名</li>
+<li>DROP[COLUMN]子句 删除表中多余的列</li>
+<li>RENAME[TO]子句 为表重新赋予一个表名</li>
+</ul>
+<h4 id="删除表">删除表</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">DROP</span> [<span style="color:#66d9ef">TEMPORARY</span>] <span style="color:#66d9ef">TABLE</span> [<span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span>]
+            tbl_name [<span style="color:#960050;background-color:#1e0010">，</span>tbl_name]<span style="color:#960050;background-color:#1e0010">…</span>
+          [<span style="color:#66d9ef">RESTRICT</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">CASCADE</span>]
+</code></pre></div><h4 id="查看表">查看表</h4>
+<p>显示指定数据库中存放的所有表名</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SHOW</span> [<span style="color:#66d9ef">FULL</span>] <span style="color:#66d9ef">TABLE</span> [<span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">FROM</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">IN</span><span style="color:#960050;background-color:#1e0010">}</span> db_name]
+           [<span style="color:#66d9ef">LIKE</span><span style="color:#960050;background-color:#1e0010">’</span>pattern<span style="color:#960050;background-color:#1e0010">’</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">WHERE</span> expr]
+</code></pre></div><p>显示指定数据表的结构</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SHOW</span> [<span style="color:#66d9ef">FULL</span>] COLUMNS <span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">FROM</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">IN</span><span style="color:#960050;background-color:#1e0010">}</span> tbl_name[<span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">FROM</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">IN</span><span style="color:#960050;background-color:#1e0010">}</span> db_name] 
+           [<span style="color:#66d9ef">LIKE</span><span style="color:#960050;background-color:#1e0010">’</span>pattern<span style="color:#960050;background-color:#1e0010">’</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">WHERE</span> expr]
+
+<span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">DESCRIBE</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">DESC</span><span style="color:#960050;background-color:#1e0010">}</span> tbl_name [col_name <span style="color:#f92672">|</span> wild]
+</code></pre></div><h3 id="索引定义">索引定义</h3>
+<p>索引是提高数据文件访问效率的有效方法
+索引存在的弊端</p>
+<ul>
+<li>索引是以文件的形式存储的，如果有大量的索引，索引文件可能比数据文件更快达到最大的文件尺寸；</li>
+<li>索引在提高查询速度的同时，会降低更新表的速度</li>
+</ul>
+<p>类型</p>
+<ul>
+<li>普通索引 INDEX、KEY</li>
+<li>唯一索引 UNIQUE</li>
+<li>主键索引 PRIMARY KEY</li>
+</ul>
+<h4 id="索引创建">索引创建</h4>
+<p>使用CREATE INDEX语句创建</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> [<span style="color:#66d9ef">UNIQUE</span>] <span style="color:#66d9ef">INDEX</span> index_name
+            <span style="color:#66d9ef">ON</span> tbl_name(index_col_name,<span style="color:#960050;background-color:#1e0010">…</span>)
+
+</code></pre></div><p>示例：
+1，在数据库mysql_test的表customers上，根据客户姓名列的前三个字符创建一个升序索引index_customers。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">mysql<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">CREATE</span>  <span style="color:#66d9ef">INDEX</span> index_customers
+            <span style="color:#f92672">-&gt;</span>            <span style="color:#66d9ef">ON</span> mysql_test.customers(cust_name(<span style="color:#ae81ff">3</span>)  <span style="color:#66d9ef">ASC</span>);
+    Query OK,<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">rows</span> affected(<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">20</span> sec)
+    Records:<span style="color:#ae81ff">0</span>  Duplicates:<span style="color:#ae81ff">0</span>  Warnings:<span style="color:#ae81ff">0</span>
+</code></pre></div><p>2，在数据库mysql_test的表customers上，根据客户姓名列和客户id号创建一个组合索引index_cust。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    mysql<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">CREATE</span>  <span style="color:#66d9ef">INDEX</span> index_cust
+            <span style="color:#f92672">-&gt;</span>            <span style="color:#66d9ef">ON</span> mysql_test.customers(cust_name,cust_id);
+    Query OK,<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">rows</span> affected(<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">20</span> sec)
+    Records:<span style="color:#ae81ff">0</span>  Duplicates:<span style="color:#ae81ff">0</span>  Warnings:<span style="color:#ae81ff">0</span>
+
+</code></pre></div><p>使用CREATE TABLE语句创建</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">mysql<span style="color:#f92672">&gt;</span>USE mysql_test;
+    <span style="color:#66d9ef">Database</span> changed
+    mysql<span style="color:#f92672">&gt;</span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> seller
+            <span style="color:#f92672">-&gt;</span>(
+            <span style="color:#f92672">-&gt;</span>   seller_id int <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+            <span style="color:#f92672">-&gt;</span>   seller_name char(<span style="color:#ae81ff">50</span>)<span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+            <span style="color:#f92672">-&gt;</span>   seller_address char(<span style="color:#ae81ff">50</span>)<span style="color:#66d9ef">NULL</span>,
+            <span style="color:#f92672">-&gt;</span>   seller_contact char(<span style="color:#ae81ff">50</span>)<span style="color:#66d9ef">NULL</span>,
+            <span style="color:#f92672">-&gt;</span>   product_type int(<span style="color:#ae81ff">5</span>)<span style="color:#66d9ef">NULL</span>,
+            <span style="color:#f92672">-&gt;</span>   sales int <span style="color:#66d9ef">NULL</span>,
+            <span style="color:#f92672">-&gt;</span>   <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>(seller_id,product_type),
+            <span style="color:#f92672">-&gt;</span>   <span style="color:#66d9ef">INDEX</span> index_seller(sales)
+            <span style="color:#f92672">-&gt;</span>);
+     Query OK,<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">rows</span> affected(<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">14</span> sec)
+</code></pre></div><p>使用ALTER TABLE语句创建</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">mysql<span style="color:#f92672">&gt;</span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> mysql_test.seller
+             <span style="color:#f92672">-&gt;</span>      <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">INDEX</span> index_seller_name(seller_name);
+    Query OK,<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">rows</span> affected(<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">19</span> sec)
+    Records:<span style="color:#ae81ff">0</span>  Duplicates:<span style="color:#ae81ff">0</span>  Warnings:<span style="color:#ae81ff">0</span>
+</code></pre></div><h4 id="索引的查看show-index">索引的查看（SHOW INDEX）</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SHOW</span> <span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">INDEX</span> <span style="color:#f92672">|</span> INDEXES <span style="color:#f92672">|</span> KEYS<span style="color:#960050;background-color:#1e0010">}</span>
+            <span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">FROM</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">IN</span><span style="color:#960050;background-color:#1e0010">}</span> tbl_name
+            [<span style="color:#960050;background-color:#1e0010">{</span><span style="color:#66d9ef">FROM</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">IN</span><span style="color:#960050;background-color:#1e0010">}</span> db_name]
+            [<span style="color:#66d9ef">WHERE</span> expr]
+
+</code></pre></div><h4 id="索引的删除使用drop-index语句">索引的删除：使用DROP INDEX语句</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">INDEX</span> index_name <span style="color:#66d9ef">ON</span> tbl_name;
+mysql<span style="color:#f92672">&gt;</span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">INDEX</span>  index_cust <span style="color:#66d9ef">ON</span> mysql_test.customers.
+Query OK,<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">rows</span> affected(<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">19</span> sec)
+    Records:<span style="color:#ae81ff">0</span>  Duplicates:<span style="color:#ae81ff">0</span>  Warnings:<span style="color:#ae81ff">0</span>
+
+</code></pre></div><h4 id="索引的删除使用alter-table语句">索引的删除：使用ALTER TABLE语句</h4>
+<p>使用ALTER TABLE语句删除数据库mysql_test中表customers的主键和索引index_customers</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">mysql<span style="color:#f92672">&gt;</span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> mysql_test.customers
+             <span style="color:#f92672">-&gt;</span>       <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+             <span style="color:#f92672">-&gt;</span>       <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">INDEX</span> index_customers;
+    Query OK,<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">rows</span> affected(<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">20</span> sec)
+    Records:<span style="color:#ae81ff">0</span>  Duplicates:<span style="color:#ae81ff">0</span>  Warnings:<span style="color:#ae81ff">0</span>
+</code></pre></div>
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">chosen1cwp</a> with
+    <a href="https://github.com/chosen1cwp">Github Home</a>.
+</div>
+
+    </div>
+  </body>
+</html>

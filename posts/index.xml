@@ -7,10 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>©2020 chosen1cwp.</copyright>
-    <lastBuildDate>Mon, 19 Apr 2021 14:13:56 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 16 Jul 2021 16:50:15 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>照片变素描艺术照测试</title>
+      <link>https://blog.chosen1cwp.com/posts/photo_to_sketch_art_photo/</link>
+      <pubDate>Fri, 16 Jul 2021 16:50:15 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/photo_to_sketch_art_photo/</guid>
+      <description>浏览GitHub时，无意间看到一个照片变素描的项目后，在好奇心的驱使，clone 了项目在本机跑起来，就是站在巨人的肩头看看新世界~~ 看了项目</description>
+    </item>
     
-	<atom:link href="https://blog.chosen1cwp.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>常见web攻击方法及防御手段简要总结</title>
+      <link>https://blog.chosen1cwp.com/posts/web_attack_desc/</link>
+      <pubDate>Fri, 16 Jul 2021 16:45:54 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/web_attack_desc/</guid>
+      <description>1. CSRF （cross-site request forgery）跨站请求伪造 利用cookie，用户本地存储cookie，攻击者利用用户的cookie进行认证，然</description>
+    </item>
     
+    <item>
+      <title>Tomact配置域名HTTPS访问</title>
+      <link>https://blog.chosen1cwp.com/posts/tomcat_config/</link>
+      <pubDate>Fri, 16 Jul 2021 16:26:14 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/tomcat_config/</guid>
+      <description>接手公司一个人管系统的项目，一直都是IP+port在访问，极不不方便记忆，且近期业务需要通过等级保护认证，必须满足等保三级认证的要求，所以有</description>
+    </item>
     
     <item>
       <title>创业</title>
@@ -19,6 +42,15 @@
       
       <guid>https://blog.chosen1cwp.com/posts/startabusiness/</guid>
       <description>创业，是很多人的梦想。 不知道多少人在上班不开心的时候，都曾幻想过自己创业当老板，然后每天只需要躺着收钱就好了。 当然，创业风险很大，亏钱的概率</description>
+    </item>
+    
+    <item>
+      <title>人生的困局</title>
+      <link>https://blog.chosen1cwp.com/posts/thedilemmaoflife/</link>
+      <pubDate>Wed, 07 Apr 2021 18:05:24 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/thedilemmaoflife/</guid>
+      <description>小镇做题家的困局，为啥有才华的人却爬不上去 “小镇做题家”这个词火了，一般说的是那些出身小城，擅长应试，进而通过高考跻身知名大学。可是在此之后</description>
     </item>
     
     <item>
@@ -130,7 +162,7 @@
     </item>
     
     <item>
-      <title>四大险种之一意外险</title>
+      <title>四大险种-意外险</title>
       <link>https://blog.chosen1cwp.com/posts/%E5%9B%9B%E5%A4%A7%E9%99%A9%E7%A7%8D%E4%B9%8B%E4%B8%80%E6%84%8F%E5%A4%96%E9%99%A9/</link>
       <pubDate>Wed, 30 Dec 2020 17:01:54 +0800</pubDate>
       
@@ -139,7 +171,6 @@
     </item>
     
     <item>
-<<<<<<< HEAD
       <title>Auto.js实现自动收取蚂蚁森林能量</title>
       <link>https://blog.chosen1cwp.com/posts/auto.js%E5%AE%9E%E7%8E%B0android%E6%89%8B%E6%9C%BA%E6%94%B6%E5%8F%96%E8%9A%82%E8%9A%81%E6%A3%AE%E6%9E%97%E8%83%BD%E9%87%8F/</link>
       <pubDate>Wed, 23 Dec 2020 14:35:58 +0800</pubDate>
@@ -167,8 +198,6 @@
     </item>
     
     <item>
-=======
->>>>>>> 250c8236eeb5cce393b1e029d3f186863bf3e34a
       <title>Iphone12验机</title>
       <link>https://blog.chosen1cwp.com/posts/iphone12%E9%AA%8C%E6%9C%BA/</link>
       <pubDate>Tue, 15 Dec 2020 16:00:59 +0800</pubDate>
@@ -201,7 +230,7 @@
       <pubDate>Mon, 28 Sep 2020 19:46:07 +0800</pubDate>
       
       <guid>https://blog.chosen1cwp.com/posts/one_time_work/</guid>
-      <description>一次性工作 每次看到 IT 公司的招聘广告，我往往有一种感觉，很多工作是一次性工作。所谓&amp;rdquo; 一次性工作&amp;rdquo;，就是企业用完人之后，</description>
+      <description>一次性工作 每次看到 IT 公司的招聘广告，我往往有一种感觉，很多工作是一次性工作。所谓&amp;quot; 一次性工作&amp;quot;，就是企业用完人之后，就会</description>
     </item>
     
     <item>

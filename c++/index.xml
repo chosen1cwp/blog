@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43;s on Chosen1cwp&#39;s Blog</title>
+    <link>https://blog.chosen1cwp.com/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43;s on Chosen1cwp&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>©2020 chosen1cwp.</copyright>
+    <lastBuildDate>Wed, 07 Apr 2021 15:01:38 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chapter9</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter9/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:38 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chapter8</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter8/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:33 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chapter7</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter7/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:28 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chapter6</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter6/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:25 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chapter5</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter5/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:19 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chapter4</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter4/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:16 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chapter3</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter3/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:12 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>密训资料</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter2/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:08 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter2/</guid>
+      <description>const 与 指针 共同使用 如果唯一的const 位于符号 * 的左侧，表示 指针所指数据是常量，数据不同通过本指针改变，但可以通过其他方式改变，指针本身是变量</description>
+    </item>
+    
+    <item>
+      <title>第一章 C&#43;&#43;语言简介</title>
+      <link>https://blog.chosen1cwp.com/c&#43;&#43;/chapter1/</link>
+      <pubDate>Wed, 07 Apr 2021 15:01:01 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/c&#43;&#43;/chapter1/</guid>
+      <description>c++语言发展简史 c语言是c++的前身，在进一步扩充和完善c语言的基础上得到了c++语言。 程序设计语言分类： 低级语言 机器语言，依赖于CPU的</description>
+    </item>
+    
+  </channel>
+</rss>

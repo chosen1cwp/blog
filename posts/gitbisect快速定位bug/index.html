@@ -58,95 +58,47 @@ Jan. 5, 2021
 
 
 <br/><br/>
-
-
 <h3 id="业务场景">业务场景</h3>
-
 <blockquote>
 <p>某一天，业务部门反馈说系统某个功能现在不能用了，之前还是能用的，你有点诧异，随即在开发环境一测，果然如此。此时你一定在想到底咋回事？是代码被其他同事合并分支时处理了？是某位同事出于某种原因做了特殊处理？还是各种其他的原因呢？总之就是很想知道到底是什么时候什么人做了什么是导致的功能错误！</p>
 </blockquote>
-
 <h3 id="简介">简介</h3>
-
-<p>碰到上面的情况，你就可以使用 <a href="https://git-scm.com/docs/git-bisect" rel="nofollow noreferrer" target="_blank">git bisect</a> 命令来快速定位问题发生在那一次代码提交。</p>
-
-<p><a href="https://git-scm.com/docs/git-bisect" rel="nofollow noreferrer" target="_blank">git bisect</a>是一个很有用的命令，用来查找哪一次代码提交引入了错误！知道了那一次的提交导致了错误，也就知道了什么时间什么人提交了什么导致的错误！</p>
-
-<p>它的原理很简单，就是将代码提交的历史，按照两分法不断缩小定位。所谓&rdquo;两分法&rdquo;，就是将代码历史一分为二，确定问题出在前半部分，还是后半部分，不断执行这个过程，直到范围缩小到某一次代码提交。</p>
-
+<p>碰到上面的情况，你就可以使用 <a href="https://git-scm.com/docs/git-bisect">git bisect</a> 命令来快速定位问题发生在那一次代码提交。</p>
+<p><a href="https://git-scm.com/docs/git-bisect">git bisect</a>是一个很有用的命令，用来查找哪一次代码提交引入了错误！知道了那一次的提交导致了错误，也就知道了什么时间什么人提交了什么导致的错误！</p>
+<p>它的原理很简单，就是将代码提交的历史，按照两分法不断缩小定位。所谓&quot;两分法&quot;，就是将代码历史一分为二，确定问题出在前半部分，还是后半部分，不断执行这个过程，直到范围缩小到某一次代码提交。</p>
 <p>使用它的方法是，首先告诉它一个已知包含 bug 的“ bad”提交，以及一个已知包含 bug 的“ good”提交。然后 git bisect 在这两个端点之间选择一个提交，并询问您所选择的提交是“好”还是“坏”。以此类推不断的缩小范围，直到找到引入更改的确切提交。</p>
-
 <h3 id="如何使用">如何使用</h3>
-
-<h4 id="1-查看历史提交记录">1，查看历史提交记录</h4>
-
+<h4 id="1查看历史提交记录">1，查看历史提交记录</h4>
 <pre><code>$ git log --pretty=oneline
-</code></pre>
-
-<p><img src="http://static.chosen1cwp.com/cmtlog.png" alt="alt 项目仓库提交历史记录" /></p>
-
+</code></pre><p><img src="http://static.chosen1cwp.com/cmtlog.png" alt="alt 项目仓库提交历史记录"></p>
 <p>上图中的提交记录，是<code>git log</code>配置别名后，更形象的一种展示方式，只用<code>git log --pretty=oneline</code>后也能显示提交历史记录，但是显示不够形象。</p>
-
-<h4 id="2-查询导致错误的提交">2，查询导致错误的提交</h4>
-
-<h5 id="2-1-启动查错">2.1 启动查错</h5>
-
+<h4 id="2查询导致错误的提交">2，查询导致错误的提交</h4>
+<h5 id="21-启动查错">2.1 启动查错</h5>
 <p>查找 <code>最近提交的commitID</code> 与 <code>查找范围起点的commitID</code> 之间的提交历史，作为查错范围。</p>
-
 <pre><code>$ git bisect start [最近提交的commitID] [查找范围起点的commitID]
-</code></pre>
-
-<p>具体执行命令：</p>
-
+</code></pre><p>具体执行命令：</p>
 <pre><code>$ git bisect start HEAD 4d83cf
-</code></pre>
-
-<p>执行上面的命令后项目代码就会切换到这段提交历史范围中间的那个提交上。此时再次测试功能点，看此时是否正常？</p>
-
-<h5 id="2-2-查错过程">2.2 查错过程</h5>
-
+</code></pre><p>执行上面的命令后项目代码就会切换到这段提交历史范围中间的那个提交上。此时再次测试功能点，看此时是否正常？</p>
+<h5 id="22-查错过程">2.2 查错过程</h5>
 <p>如果测试功能正常，则说明当前所在的提交（提交历史最中间的这一次提交）是正确的，既然中间的提交没问题，说明错误应该是出现在提交历史的后半段，此时需要执行下面的命令来标识当前所在的提交（提交历史最中间的这一次提交）是正确的，同时会自动切换到后半段提交历史的中间提交上。</p>
-
 <pre><code>$ git bisect good
-</code></pre>
-
-<p>此时，再次测试功能点是否正确，如果错误，则说明当前所在的提交已经是错误的，使用下面的命令标识当前所在的提交是错误的，同时会自动切换到错误范围的中间提交上。</p>
-
+</code></pre><p>此时，再次测试功能点是否正确，如果错误，则说明当前所在的提交已经是错误的，使用下面的命令标识当前所在的提交是错误的，同时会自动切换到错误范围的中间提交上。</p>
 <pre><code>$ git bisect bad
-</code></pre>
-
-<p>不断重复上面的过程，直到成功查找到导致问题的那一次提交。此时Git 会给出如下的提示</p>
-
+</code></pre><p>不断重复上面的过程，直到成功查找到导致问题的那一次提交。此时Git 会给出如下的提示</p>
 <pre><code>213f332de08dc311b2f901d47f5c738fa9ebeecc is the first bad commit
-</code></pre>
-
-<p>查到了错误由那个提交导致后，可以查约代码，确定错误的具体原因，方便后续修复。</p>
-
-<h4 id="3-退出查询错误-bisect-并返回到原来的-head">3，退出查询错误（bisect）并返回到原来的 HEAD</h4>
-
+</code></pre><p>查到了错误由那个提交导致后，可以查约代码，确定错误的具体原因，方便后续修复。</p>
+<h4 id="3退出查询错误bisect并返回到原来的-head">3，退出查询错误（bisect）并返回到原来的 HEAD</h4>
 <pre><code>$ git bisect reset
-</code></pre>
-
-<p>默认情况下，这将把您的树返回到 git bisect 启动之前签出的提交。当然你也可以返回到另外一个提交位置比如：</p>
-
+</code></pre><p>默认情况下，这将把您的树返回到 git bisect 启动之前签出的提交。当然你也可以返回到另外一个提交位置比如：</p>
 <pre><code>$ git bisect reset &lt;commit&gt;
-</code></pre>
-
-<p>全过程如下图：</p>
-
-<p><img src="http://static.chosen1cwp.com/queryErrorCommitID.png" alt="alt 查错全过程" /></p>
-
-<h4 id="4-解决问题">4，解决问题</h4>
-
+</code></pre><p>全过程如下图：</p>
+<p><img src="http://static.chosen1cwp.com/queryErrorCommitID.png" alt="alt 查错全过程"></p>
+<h4 id="4解决问题">4，解决问题</h4>
 <p>此时你已经了解了 <code>什么时间</code>、<code>提交人</code>、<code>提交了什么代码</code>  这些关键要素，接下来就是修复代码，再次提交解决bug了。至于提交人为啥提交了这些代码，可以与提交人简单沟通下确保了解他的真实意图，不要出现误解！</p>
-
 <h3 id="总结">总结</h3>
-
-<p>上面只是用到了bisect一些基础命令，更丰富的使用技巧请参考：<a href="https://git-scm.com/docs/git-bisect" rel="nofollow noreferrer" target="_blank">git bisect </a>，或运行下面命令查看：</p>
-
+<p>上面只是用到了bisect一些基础命令，更丰富的使用技巧请参考：<a href="https://git-scm.com/docs/git-bisect">git bisect </a>，或运行下面命令查看：</p>
 <pre><code>$ git bisect --h
 </code></pre>
-
 
 
         <div class="footer">
