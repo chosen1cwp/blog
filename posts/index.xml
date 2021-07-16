@@ -7,7 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>©2020 chosen1cwp.</copyright>
-    <lastBuildDate>Tue, 02 Mar 2021 16:40:55 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Apr 2021 14:13:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.chosen1cwp.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>创业</title>
+      <link>https://blog.chosen1cwp.com/posts/startabusiness/</link>
+      <pubDate>Mon, 19 Apr 2021 14:13:56 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/startabusiness/</guid>
+      <description>创业，是很多人的梦想。 不知道多少人在上班不开心的时候，都曾幻想过自己创业当老板，然后每天只需要躺着收钱就好了。 当然，创业风险很大，亏钱的概率</description>
+    </item>
+    
     <item>
       <title>Oracle数据实时同步MySQL</title>
       <link>https://blog.chosen1cwp.com/posts/oracle%E6%95%B0%E6%8D%AE%E5%AE%9E%E6%97%B6%E5%90%8C%E6%AD%A5mysql/</link>
@@ -126,6 +139,7 @@
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Auto.js实现自动收取蚂蚁森林能量</title>
       <link>https://blog.chosen1cwp.com/posts/auto.js%E5%AE%9E%E7%8E%B0android%E6%89%8B%E6%9C%BA%E6%94%B6%E5%8F%96%E8%9A%82%E8%9A%81%E6%A3%AE%E6%9E%97%E8%83%BD%E9%87%8F/</link>
       <pubDate>Wed, 23 Dec 2020 14:35:58 +0800</pubDate>
@@ -153,6 +167,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> 250c8236eeb5cce393b1e029d3f186863bf3e34a
       <title>Iphone12验机</title>
       <link>https://blog.chosen1cwp.com/posts/iphone12%E9%AA%8C%E6%9C%BA/</link>
       <pubDate>Tue, 15 Dec 2020 16:00:59 +0800</pubDate>
@@ -185,7 +201,7 @@
       <pubDate>Mon, 28 Sep 2020 19:46:07 +0800</pubDate>
       
       <guid>https://blog.chosen1cwp.com/posts/one_time_work/</guid>
-      <description>一次性工作 每次看到 IT 公司的招聘广告，我往往有一种感觉，很多工作是一次性工作。所谓&amp;quot; 一次性工作&amp;quot;，就是企业用完人之后，就会</description>
+      <description>一次性工作 每次看到 IT 公司的招聘广告，我往往有一种感觉，很多工作是一次性工作。所谓&amp;rdquo; 一次性工作&amp;rdquo;，就是企业用完人之后，</description>
     </item>
     
     <item>

@@ -7,6 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>©2020 chosen1cwp.</copyright>
+<<<<<<< HEAD
     <lastBuildDate>Fri, 26 Mar 2021 22:19:28 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>线性表</title>
@@ -24,6 +25,20 @@
       
       <guid>https://blog.chosen1cwp.com/data_structure/chapter1/</guid>
       <description>概述 数据结构是指一组相互之间存在一种或多种特性关系的数据组织方式和它们在计算机内的存储方式，以及定义在改组数据上的一组操作，合理的数据结构可</description>
+=======
+    <lastBuildDate>Mon, 19 Apr 2021 14:13:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.chosen1cwp.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>创业</title>
+      <link>https://blog.chosen1cwp.com/posts/startabusiness/</link>
+      <pubDate>Mon, 19 Apr 2021 14:13:56 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/startabusiness/</guid>
+      <description>创业，是很多人的梦想。 不知道多少人在上班不开心的时候，都曾幻想过自己创业当老板，然后每天只需要躺着收钱就好了。 当然，创业风险很大，亏钱的概率</description>
+>>>>>>> 250c8236eeb5cce393b1e029d3f186863bf3e34a
     </item>
     
     <item>
@@ -153,6 +168,7 @@
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Auto.js实现自动收取蚂蚁森林能量</title>
       <link>https://blog.chosen1cwp.com/posts/auto.js%E5%AE%9E%E7%8E%B0android%E6%89%8B%E6%9C%BA%E6%94%B6%E5%8F%96%E8%9A%82%E8%9A%81%E6%A3%AE%E6%9E%97%E8%83%BD%E9%87%8F/</link>
       <pubDate>Wed, 23 Dec 2020 14:35:58 +0800</pubDate>
@@ -180,6 +196,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> 250c8236eeb5cce393b1e029d3f186863bf3e34a
       <title>Iphone12验机</title>
       <link>https://blog.chosen1cwp.com/posts/iphone12%E9%AA%8C%E6%9C%BA/</link>
       <pubDate>Tue, 15 Dec 2020 16:00:59 +0800</pubDate>
@@ -212,7 +230,7 @@
       <pubDate>Mon, 28 Sep 2020 19:46:07 +0800</pubDate>
       
       <guid>https://blog.chosen1cwp.com/posts/one_time_work/</guid>
-      <description>一次性工作 每次看到 IT 公司的招聘广告，我往往有一种感觉，很多工作是一次性工作。所谓&amp;quot; 一次性工作&amp;quot;，就是企业用完人之后，就会</description>
+      <description>一次性工作 每次看到 IT 公司的招聘广告，我往往有一种感觉，很多工作是一次性工作。所谓&amp;rdquo; 一次性工作&amp;rdquo;，就是企业用完人之后，</description>
     </item>
     
     <item>
@@ -239,7 +257,7 @@
       <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.chosen1cwp.com/photos/warsaw-poland/</guid>
-      <description>文化科学宫 是波兰华沙市中心一座著名的高层建筑。它的总高度为237米（778英尺），是波兰最高的建筑，欧盟第五高楼（包括塔尖），也是欧洲大陆最</description>
+      <description>文化科学宫 &amp;gt; 是波兰华沙市中心一座著名的高层建筑。它的总高度为237米（778英尺），是波兰最高的建筑，欧盟第五高楼（包括塔尖），也是欧洲大陆</description>
     </item>
     
     <item>
@@ -284,7 +302,7 @@
       <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.chosen1cwp.com/photos/panaji-india-2/</guid>
-      <description>帕纳吉 原名潘吉姆，是印度果阿州首府和北果阿区总部。它位于Ilhas de Goa分区（taluka）的Mandovi河口岸边。潘吉姆是果阿最大的城</description>
+      <description>帕纳吉 &amp;gt; 原名潘吉姆，是印度果阿州首府和北果阿区总部。它位于Ilhas de Goa分区（taluka）的Mandovi河口岸边。潘吉姆是果阿最大的</description>
     </item>
     
     <item>
