@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <meta name="googlebot" content="index,follow,snippet,archive">
-    <link rel="stylesheet" href="http://blog.chosen1cwp.com/hugo-theme-console/css/terminal-0.7.1.min.css">
-    <link rel="stylesheet" href="http://blog.chosen1cwp.com/hugo-theme-console/css/animate-3.7.2.min.css">
-    <link rel="stylesheet" href="http://blog.chosen1cwp.com/hugo-theme-console/css/console.css">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/terminal-0.7.1.min.css">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/animate-3.7.2.min.css">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/console.css">
     
       <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -19,7 +19,7 @@
        <meta property="og:title" content="最新个税规则文档" />
 <meta property="og:description" content="chosen1cwp 的个人博客" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://blog.chosen1cwp.com/posts/%E6%9C%80%E6%96%B0%E4%B8%AA%E7%A8%8E%E8%A7%84%E5%88%99%E6%96%87%E6%A1%A3/" /><meta property="article:published_time" content="2021-01-26T14:59:07+08:00" />
+<meta property="og:url" content="https://blog.chosen1cwp.com/posts/%E6%9C%80%E6%96%B0%E4%B8%AA%E7%A8%8E%E8%A7%84%E5%88%99%E6%96%87%E6%A1%A3/" /><meta property="article:published_time" content="2021-01-26T14:59:07+08:00" />
 
 
 
@@ -34,16 +34,16 @@
             <div class="logo terminal-prompt">
               
               
-              <a href="http://blog.chosen1cwp.com/" class="no-style site-name">Chosen1cwp&#39;s Blog</a>:~# 
-              <a href='http://blog.chosen1cwp.com/posts'>posts</a>/<a href='http://blog.chosen1cwp.com/posts/%E6%9C%80%E6%96%B0%E4%B8%AA%E7%A8%8E%E8%A7%84%E5%88%99%E6%96%87%E6%A1%A3'>%E6%9C%80%E6%96%B0%E4%B8%AA%E7%A8%8E%E8%A7%84%E5%88%99%E6%96%87%E6%A1%A3</a>/</div></header>
+              <a href="https://blog.chosen1cwp.com/" class="no-style site-name">Chosen1cwp&#39;s Blog</a>:~# 
+              <a href='https://blog.chosen1cwp.com/posts'>posts</a>/<a href='https://blog.chosen1cwp.com/posts/%E6%9C%80%E6%96%B0%E4%B8%AA%E7%A8%8E%E8%A7%84%E5%88%99%E6%96%87%E6%A1%A3'>%E6%9C%80%E6%96%B0%E4%B8%AA%E7%A8%8E%E8%A7%84%E5%88%99%E6%96%87%E6%A1%A3</a>/</div></header>
           <nav class="terminal-menu">
             <ul vocab="https://schema.org/" typeof="BreadcrumbList">
                 
-                <li><a href="http://blog.chosen1cwp.com/about/" typeof="ListItem">about/</a></li>
+                <li><a href="https://blog.chosen1cwp.com/about/" typeof="ListItem">about/</a></li>
                 
-                <li><a href="http://blog.chosen1cwp.com/posts/" typeof="ListItem">posts/</a></li>
+                <li><a href="https://blog.chosen1cwp.com/posts/" typeof="ListItem">posts/</a></li>
                 
-                <li><a href="http://blog.chosen1cwp.com/photos/" typeof="ListItem">photos/</a></li>
+                <li><a href="https://blog.chosen1cwp.com/photos/" typeof="ListItem">photos/</a></li>
                 
             </ul>
           </nav>
@@ -149,7 +149,7 @@ Jan. 26, 2021
 <p>增值税 = 不含税收入 * 增值税税率（税前应发总额大于101000才会计算，否则为0）</p>
 </li>
 <li>
-<p>收入额 = (当年度佣金月以前所有月份「不含税收入 or 税前应发总额」)之和 ) * (1- 20%)（税前应发总额大于101000，取不含税收入，否则取税前应发总额）</p>
+<p>收入额 = (当年度佣金月以前所有月份「不含税收入 or 税前应发总额」)之和 ) * (1- 20%)（税前应发总额大于101000，取不含税收入，否则取税前应发总额，税前应发总额为0，则收入额为0）</p>
 </li>
 <li>
 <p>展业成本 = 当前佣金月收入额 * 25%</p>
@@ -164,7 +164,13 @@ Jan. 26, 2021
 <p>地方教育费附加 = 当前佣金月增值税 * 2% * 50%</p>
 </li>
 <li>
-<p>应纳税所得额 = (当前佣金月收入额 - 当前佣金月展业成本 - ((当年度佣金月以前有增值税的月份 * 当年度佣金月（包含本佣金月）以前 税前应发总额 &gt; 0 的佣金月数 + &hellip;)  + 当前佣金月附加税之和 * 1) - 5000 * 年度佣金月数</p>
+<p><del>应纳税所得额 = (当前佣金月收入额 - 当前佣金月展业成本 - ((当年度佣金月以前有增值税的月份 * 当年度佣金月（包含本佣金月）以前 税前应发总额 &gt; 0 的佣金月数 + &hellip;)  + 当前佣金月附加税之和 * 1) - 5000 * 年度佣金月数</del></p>
+</li>
+<li>
+<p><del>应纳税所得额 = 当前佣金月收入额 - 当前佣金月展业成本 - 当前佣金月附加税之和 - 5000 * 年度佣金月数</del></p>
+</li>
+<li>
+<p>应纳税所得额 = 当前佣金月收入额 - 当前佣金月展业成本 - (当前佣金月附加税之和 + 当年度历史佣金月附加税之和) - 5000 * 年度佣金月数</p>
 </li>
 <li>
 <p>应纳个人所得税 = 当前佣金月个人应纳税所得额 * 对应预扣率 - 对应速算扣除数 - 年度历史佣金月应纳个人所得税之和</p>
@@ -214,7 +220,11 @@ Jan. 26, 2021
 </tr>
 <tr>
 <td style="text-align:left">9</td>
-<td style="text-align:left">应纳税所得额  = (86336.63 - 21584.16 - ( ( 37.77 + 16.19 + 10.79 ) * 1) - 5000 *1) = 59687.72</td>
+<td style="text-align:left"><del>应纳税所得额</del>  = (86336.63 - 21584.16 - ( ( 37.77 + 16.19 + 10.79 ) * 1) - 5000 *1) = 59687.72</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left">应纳税所得额  = (86336.63 - 21584.16 - ( 37.77 + 16.19 + 10.79 ) - 5000 *1) = 59687.72</td>
 </tr>
 <tr>
 <td style="text-align:left">10</td>
@@ -265,11 +275,231 @@ Jan. 26, 2021
 </tr>
 <tr>
 <td style="text-align:left">9</td>
-<td style="text-align:left">应纳税所得额  = (110336.63 - 27584.16 - ( ( 37.77 + 16.19 + 10.79 ) * 2 + ( 0 + 0 + 0 ) * 1) - 5000 *2) = 72622.97</td>
+<td style="text-align:left"><del>应纳税所得额</del>  = (110336.63 - 27584.16 - ( ( 37.77 + 16.19 + 10.79 ) * 2 + ( 0 + 0 + 0 ) * 1) - 5000 * 2) = 72622.97</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left">应纳税所得额  = (110336.63 - 27584.16 - ( 0 + 0 + 0 + 37.77 + 16.19 + 10.79 ) - 5000 * 2) = 72687.72</td>
 </tr>
 <tr>
 <td style="text-align:left">10</td>
-<td style="text-align:left">应纳个人所得税  = 72622.97 * 10% - 2520 - 3448.77 = 1293.53</td>
+<td style="text-align:left">应纳个人所得税  = 72687.72 * 10% - 2520 - 3448.77 = 1300.00</td>
+</tr>
+</tbody>
+</table>
+<h3 id="假设-202102-佣金月">假设 202102 佣金月</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">计算顺序</th>
+<th style="text-align:left">各个税项计算过程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">税前应发总额 = 6000</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">不含税收入 =  0</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">增值税 = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">收入额 = ( 107920.79 + 30000 + 6000 ) * (1-20%) = 115136.63</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">展业成本 = 115136.63 * 25% = 28784.16</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">城建税 = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">教育费附加 = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left">地方教育费附加  = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left"><del>应纳税所得额</del>  = (115136.63 - 28784.16 - ( ( 37.77 + 16.19 + 10.79 ) * 3 + ( 0 + 0 + 0 ) * 2 + ( 0 + 0 + 0 ) * 1) - 5000 * 3) = 71158.22</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left">应纳税所得额  = (115136.63 - 28784.16 - ( 0 + 0 + 0 + 37.77 + 16.19 + 10.79 + 0 + 0 + 0 ) - 5000 * 3) = 71287.72</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:left">应纳个人所得税  = 71287.72 * 10% - 2520 - (3448.77 + 1300.00) = -139.9980 =&gt; 0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="假设-202103-佣金月">假设 202103 佣金月</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">计算顺序</th>
+<th style="text-align:left">各个税项计算过程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">税前应发总额 = 160000</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">不含税收入 =  160000 / (1 + 1%) = 158415.84</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">增值税 = 158415.84 * 1% = 1584.16</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">收入额 = ( 107920.79 + 30000 + 6000 + 158415.84 ) * (1-20%) = 241869.30</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">展业成本 = 241869.30 * 25% = 60467.33</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">城建税 =  1584.16 * 7% * 50% = 55.45</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">教育费附加 = 1584.16 * 3% * 50% = 23.76</td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left">地方教育费附加  = 1584.16 * 2% * 50% = 15.84</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left"><del>应纳税所得额</del>  = (241869.30 - 60467.33 - ( ( 37.77 + 16.19 + 10.79 ) * 4 + ( 0 + 0 + 0 ) * 3 + ( 0 + 0 + 0 ) * 2 + (55.45 + 23.76 + 15.84) * 1) - 5000 * 4) = 161047.92</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left">应纳税所得额  = (241869.30 - 60467.33 - ( 0 + 0 + 0 + 37.77 + 16.19 + 10.79 + 0 + 0 + 0 + 55.45 + 23.76 + 15.84 ) - 5000 * 4) = 161242.17</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:left">应纳个人所得税  = 161242.17 * 20% - 16920 - (3448.77 + 1300.00 + 0) = 10579.66</td>
+</tr>
+</tbody>
+</table>
+<h3 id="假设-202104-佣金月">假设 202104 佣金月</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">计算顺序</th>
+<th style="text-align:left">各个税项计算过程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">税前应发总额 = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">不含税收入 =  0</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">增值税 = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">收入额 = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">展业成本 = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">城建税 =  0</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">教育费附加 = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left">地方教育费附加  = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left">应纳税所得额  = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:left">应纳个人所得税  = 0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="假设-202105-佣金月">假设 202105 佣金月</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">计算顺序</th>
+<th style="text-align:left">各个税项计算过程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">税前应发总额 = 3680</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">不含税收入 =  0</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">增值税 = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">收入额 = ( 107920.79 + 30000 + 6000 + 158415.84 + 0 + 3680 ) * (1-20%) = 244813.30</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">展业成本 = 244813.30 * 25% = 61203.33</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">城建税 =  0</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">教育费附加 = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left">地方教育费附加  = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left"><del>应纳税所得额</del>  = (244813.30 - 61203.33 - ( ( 37.77 + 16.19 + 10.79 ) * 5 + ( 0 + 0 + 0 ) * 4 + ( 0 + 0 + 0 ) * 3 + (55.45 + 23.76 + 15.84) * 2 + (0 + 0 + 0) * 1) - 5000 * 6) = 153096.12</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left">应纳税所得额  = (244813.30 - 61203.33 - ( 37.77 + 16.19 + 10.79 + 55.45 + 23.76 + 15.84 ) - 5000 * 6) = 153450.17</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:left">应纳个人所得税  = 153450.17 * 20% - 16920 - (3448.77 + 1300.00 + 0 + 10579.66 + 0) = -1558.396 =&gt; 0</td>
 </tr>
 </tbody>
 </table>
@@ -278,6 +508,7 @@ Jan. 26, 2021
 <li>因基本法佣金计算及发放都是遵循：T+1，也就是说，代理人3月份佣金实际是在次月4月份计算并发放，按照税务规则，发佣才算开始计税，所以佣金计算这里的年度指的是：上一年12月 ~ 本年度11月。比如：2019-12 ~ 2020-11 算一个年度</li>
 <li>附加税指：由增值税计算而来的，城建税、教育费附加、地方教育费附加 之和</li>
 <li>湖北分公司全部代理人，免征小规模增值税、城建税、教育费附加、地方教育费附加</li>
+<li>收入额的计算，如果佣金月的税前应发总额为0，则收入额也为0，不能累加当年度前几个佣金月的（税前应发总额或不含税收入）</li>
 </ul>
 <h2 id="参考文献">参考文献</h2>
 <!-- raw HTML omitted -->
