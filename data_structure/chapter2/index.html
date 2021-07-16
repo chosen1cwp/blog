@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chosen1cwp&#39;s Blog/data_structure/chapter2/</title>
+    <meta name="description" content="chosen1cwp 的个人博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/terminal-0.7.1.min.css">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/animate-3.7.2.min.css">
+    <link rel="stylesheet" href="https://blog.chosen1cwp.com/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="线性表" />
+<meta property="og:description" content="chosen1cwp 的个人博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.chosen1cwp.com/data_structure/chapter2/" /><meta property="article:published_time" content="2021-03-26T22:19:28+08:00" />
+
+
+
+<meta name="twitter:title" content="线性表"/>
+<meta name="twitter:description" content="本章主要介绍线性表的概念、特征、基本运算和线性表的两种存储结构（顺序存储结构和链式存储结构），描述线性表的基本运算在这两种存储结构上的实现。"/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://blog.chosen1cwp.com/" class="no-style site-name">Chosen1cwp&#39;s Blog</a>:~# 
+              <a href='https://blog.chosen1cwp.com/data_structure'>data_structure</a>/<a href='https://blog.chosen1cwp.com/data_structure/chapter2'>chapter2</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://blog.chosen1cwp.com/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://blog.chosen1cwp.com/posts/" typeof="ListItem">posts/</a></li>
+                
+                <li><a href="https://blog.chosen1cwp.com/photos/" typeof="ListItem">photos/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast">
+        
+<h1>线性表</h1>
+<blockquote>
+<p>本章主要介绍线性表的概念、特征、基本运算和线性表的两种存储结构（顺序存储结构和链式存储结构），描述线性表的基本运算在这两种存储结构上的实现。</p>
+</blockquote>
+<h3 id="概念">概念</h3>
+<ul>
+<li>线性表是一种线性结构（四种基本逻辑结构之一），它是由n（n&gt;=0）个数据元素组成的有穷序列，数据元素又称结点。</li>
+<li>结点的个数n称为<strong>表长</strong></li>
+<li>当n=0时，线性表不含任何数据元素，称为<strong>空表</strong></li>
+<li>当n&gt;0时，线性表通常表示成（a1,a2,a3,a4,&hellip;an），a1是<strong>起始结点</strong>，an称为<strong>终端结点</strong>。</li>
+<li>对任意一对相邻的结点ai 和 ai+1（1&lt;=i&lt;n），ai称为ai+1的<strong>直接前驱</strong>；ai+1称为ai的<strong>直接后继</strong></li>
+</ul>
+<h3 id="特征">特征</h3>
+<ul>
+<li>非空的线性表，线性表中结点具有一对一的关系</li>
+<li>有且仅有一个起始结点a1，没有直接前驱，有且仅有一个直接后继后继a2</li>
+<li>有且仅有一个终端结点an，没有直接后继，有且仅有一个直接前驱an-1</li>
+<li>其余的内部结点ai（2&lt;=i&lt;=n-1）都有且仅有一个直接前驱an-1和一个直接后继an+1</li>
+</ul>
+<h3 id="基本运算">基本运算</h3>
+<ul>
+<li>初始化 Initiate(L)：建立一个空表L=(),L不含数据元素</li>
+<li>求表长度 Length(L)：返回线性表L的长度</li>
+<li>取表元 Get(L,i)：返回线性表第i个数据元素，当i不满足1&lt;=i&lt;=Length(L)时，返回一特殊值</li>
+<li>定位 Locate(L,x)：查找线性表中数据元素值等于x的结点序号，若有多个数据元素值与x相等，运算结果为这些节点中序号的最小值，若找不到该结点，则运算结果为0</li>
+<li>插入 Insert(L,x,i)：在线性表L的第i个元素前插入一个值为x的新数据元素，参数i的合法取值范围是1&lt;=i&lt;=n+1,操作结束后表长度加1</li>
+<li>删除 Delete(L,i)：删除线性表L的第i个数据元素ai,i的有效取值范围是1&lt;=i&lt;=n，删除后线性表的表长度减1</li>
+</ul>
+<h3 id="线性表的顺序存储顺序表">线性表的顺序存储（顺序表）</h3>
+<p>线性表顺序存储的方法是：将表中的结点依次存放在计算机内存中的<!-- raw HTML omitted -->一组连续的存储单元<!-- raw HTML omitted -->中，数据元素在线性表中的邻接关系决定他们在存储空间中的存储位置，即逻辑结构中相邻的结点其存储位置也相邻。
+用顺序存储方式实现的线性表称为<strong>顺序表</strong>。一般使用<strong>数组</strong>来表示顺序表。</p>
+<p>顺序存储线性表时，需要存储：</p>
+<ul>
+<li>存储单元大小</li>
+<li>数据个数</li>
+<li>线性表大小（MaxSize）</li>
+<li>线性表长度（Length）</li>
+<li>所存放数据的类型（DataType）</li>
+</ul>
+<p>顺序表的结构体定义</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">Const <span style="color:#66d9ef">int</span> MaxSize <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+<span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span>
+{
+    DataType data[MaxSize];
+    <span style="color:#66d9ef">int</span> length;
+}Seqlist;
+Seqlist L;
+</code></pre></div><ul>
+<li>顺序表是用一维数组实现的线性表，数组的下表可以看做是元素的相对位置</li>
+<li>逻辑上相邻的元素，存储在物理位置也相邻的单元中</li>
+</ul>
+<p>顺序存储结构的特点</p>
+<ul>
+<li>线性表的逻辑结构与存储结构一致</li>
+<li>可以对数据元素实现随机读取</li>
+</ul>
+<h4 id="顺序表上的基本运算实现">顺序表上的基本运算实现</h4>
+<h5 id="插入">插入</h5>
+<p>线性表的插入运算是指在表的第i（1 &lt;= i &lt;= n+1）个位置上，插入一个新的结点<strong>x</strong>，使长度为n的线性表：
+<code>(a1,...,ai-1,ai,...an)</code>
+变成长度为n+1的线性表
+<code>(a1,...,ai-1,x,ai,...an)</code></p>
+<ul>
+<li>当表空间已满，不可再做插入操作</li>
+<li>当插入位置为非法位置，不可做正常插入操作</li>
+</ul>
+<p>顺序表插入元素，根据插入位置不同，可以分为3种情况：</p>
+<ol>
+<li>插入到顺序表的表头；</li>
+<li>在顺序表的中间位置插入元素</li>
+<li>尾随顺序表中已有元素，作为顺序表中的最后一个元素</li>
+</ol>
+<p>不论插入到那个位置，都使用同一种方式去解决，将待插入位置以及该位置往后的元素统统后移一位，然后再插入新元素。</p>
+<p><img src="http://static.chosen1cwp.com/shunxubiao_insert.png" alt="插入举例"></p>
+<p>c语言实现代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">InsertSeqlist</span>(SeqList L,DataType x, <span style="color:#66d9ef">int</span> i)
+{ 
+    <span style="color:#75715e">//将元素x插入到顺序表L的第i个数据元素之前
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (L. length<span style="color:#f92672">==</span>Maxsize) {
+        exit(<span style="color:#e6db74">&#34;表已满&#34;</span>);
+    }
+    <span style="color:#75715e">//检查插入位置是否合法
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> i<span style="color:#f92672">&gt;</span>L. length<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) {
+        exit(<span style="color:#e6db74">&#34;位置错&#34;</span>);
+    }
+    <span style="color:#66d9ef">for</span>(j<span style="color:#f92672">=</span>L.length;j<span style="color:#f92672">&gt;=</span>i;j<span style="color:#f92672">--</span>) {
+        <span style="color:#75715e">//初始i=L.length
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">//依次后移    
+</span><span style="color:#75715e"></span>        L.data[j]<span style="color:#f92672">=</span>L.data[j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]; 
+    }
+    <span style="color:#75715e">//元素x置入到下标为i-1的位置 因为顺序表第i个元素对应的数组下标为i-1
+</span><span style="color:#75715e"></span>    L.data[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">=</span>x;
+    <span style="color:#75715e">//表长度加1 
+</span><span style="color:#75715e"></span>    L.length<span style="color:#f92672">++</span>; 
+}
+</code></pre></div><p>插入算法分析</p>
+<p>假设线性表中含有n个数据元素，在进行插入操作时：</p>
+<ul>
+<li>有n+1个位置可供插入</li>
+<li>在每个位置插入的概率是：1/(n+1)</li>
+<li>在i位置插入时，要移动n-i+1个元素</li>
+<li>假设在n+1个位置上插入元素的可能性均等，则平均移动元素的个数为：n/2</li>
+<li>平均时间复杂度O(n)</li>
+</ul>
+<h5 id="删除">删除</h5>
+<p>线性表的删除操作是指将表的第i个结点删去，使长度为n的线性表（a1,&hellip;ai-1,ai,ai+1,&hellip;,an）
+变成长度为n-1的线性表（ai,&hellip;,ai-1,ai+1,&hellip;an）</p>
+<p>当删除元素的位置i不在表长的范围内（i&lt;1 || i &gt; L-&gt;length）时，为非法位置，不能做正常的删除操作</p>
+<p>顺序表的删除操作过程：</p>
+<ol>
+<li>若i=n，则只要删除终端结点，无须移动结点</li>
+<li>若1 &lt;= i &lt;= n-1，则必须将表中位置i+1,i+2,&hellip;,n的结点，依次迁移到位置i,i+1,&hellip;,n-1上，以填补删除操作造成的空缺</li>
+<li>该表的长度减1</li>
+</ol>
+<p>c语言实现代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">DeleteSeqList</span>(SeqList L,<span style="color:#66d9ef">int</span> i) {
+    <span style="color:#75715e">//删除线性表L中的第i个数据结点
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> i<span style="color:#f92672">&gt;</span>L.length) {
+        <span style="color:#75715e">//检查位置是否合法
+</span><span style="color:#75715e"></span>        exit(<span style="color:#e6db74">&#34;非法位置&#34;</span>);
+    }
+    <span style="color:#75715e">//第i个元素的下标为i-1
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(j<span style="color:#f92672">=</span>i;j<span style="color:#f92672">&lt;</span>L.length;j<span style="color:#f92672">++</span>) {
+        <span style="color:#75715e">//依次左移
+</span><span style="color:#75715e"></span>        L.data[j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">=</span>L.data[j]; 
+    }
+    <span style="color:#75715e">//表长度减1
+</span><span style="color:#75715e"></span>    L.length<span style="color:#f92672">--</span>; 
+}
+</code></pre></div><p>删除算法分析</p>
+<p>假设线性表中含有n个数据元素，在进行删除操作时：</p>
+<ul>
+<li>有n个位置可以删除</li>
+<li>在每个位置删除数据的概率是：1/n</li>
+<li>在i位置上删除时，要移动n-i个数据</li>
+<li>假定在n个位置上删除元素的可能性均等，则平均移动元素的个数为：n-1/2</li>
+<li>平均时间复杂度O(n)</li>
+</ul>
+<h5 id="定位">定位</h5>
+<p>定位运算LocateSeqlist(L,X)的功能是求L中值等于X的结点序号的最小值，当不存在这种结点时结果为0</p>
+<p>c语言实现代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">LocateSeqlist</span>(SeqList L, DataType x){
+    <span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+    <span style="color:#75715e">//在顺序表中查找值为 x 的结点
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> ((i<span style="color:#f92672">&lt;</span>L.length) <span style="color:#f92672">&amp;&amp;</span> (L.data[i]<span style="color:#f92672">!=</span>x) ) {
+        i<span style="color:#f92672">++</span>;
+    }
+
+    <span style="color:#66d9ef">if</span>(i<span style="color:#f92672">&lt;</span>L.length) {
+        <span style="color:#75715e">//若找到值为x的元素，返回元素的序号
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+    } <span style="color:#66d9ef">else</span> {
+        <span style="color:#75715e">//未查找到值为x的元素，返回0
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; 
+    }
+}
+</code></pre></div><h5 id="顺序表实现算法的分析">顺序表实现算法的分析</h5>
+<p><img src="http://static.chosen1cwp.com/suanfa_fenxi.png" alt="顺序表算法分析"></p>
+<p>顺序表优点：</p>
+<ul>
+<li>无需为表结点间的逻辑关系而增加额外的存储空间</li>
+<li>可以方便地随机存取表中的任一节点</li>
+</ul>
+<p>顺序表缺点：</p>
+<ul>
+<li>插入和删除操作运算不方便，必须移动大量的结点</li>
+<li>顺序表要求占用连续的空间，存储分配只能预先进行，因此当表长变化较大时，难以确定合适的存储规模</li>
+</ul>
+<h3 id="线性表的链式存储链表">线性表的链式存储（链表）</h3>
+<p>使用链接方式存储的线性表简称为链表 Link List</p>
+<p>常见的链式存储结构有：单链表、循环链表和双向链表</p>
+<p>这里讨论单链表的基本运算</p>
+<p><img src="http://static.chosen1cwp.com/488242410_1554365838851_A78C14AB7C4D1747966C5A86E81272D1.png" alt="单链表组成结构"></p>
+<p>单链表的组成：</p>
+<ul>
+<li>data域&mdash;存放结点值的数据域</li>
+<li>next域&mdash;存放结点的直接后继的地址（位置）的指针域（链域）</li>
+</ul>
+<p>所有的结点通过指针链接而组成单链表
+Null称为空指针
+Head 称为头指针变量，存放俩表中第一个结点地址</p>
+<p>单链表的一般图示法：</p>
+<ol>
+<li>非空单链表</li>
+<li>空单链表：head等于null，表示该链表无任何结点</li>
+<li>带头结点的非空单链表</li>
+<li>带头结点的空单链表</li>
+</ol>
+<p><img src="http://static.chosen1cwp.com/single_link_list.png" alt="不带头单链表"></p>
+<p><img src="http://static.chosen1cwp.com/single_link_list_head.png" alt="带头单链表"></p>
+<p>单链表中第一个结点内一般不存数据，称为 头结点，其作用是：为了操作的统一于方便而设立，放在第一个数据元素之前，其数据域一般无意义。</p>
+<p>有了头结点，对第一个元素结点前插入和删除第一个元素结点，其操作与对其他结点的操作就统一了。</p>
+<p>单链表的类型定义</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> node
+{
+    DataType data;<span style="color:#75715e">// 数据域
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">struct</span> node <span style="color:#f92672">*</span> next;<span style="color:#75715e">// 指针域
+</span><span style="color:#75715e"></span>}Node, <span style="color:#f92672">*</span>LinkList;
+</code></pre></div><p>单链表的特点</p>
+<ul>
+<li>起始节点又称为首结点，无前驱，故设头指针head指向开始结点</li>
+<li>链表由头指针唯一确定，单链表可以用头指针的名字来命名。头指针是head的链表可称为表head</li>
+<li>终端节点又称尾结点，无后继，故终端结点的指针域为空，即NULL</li>
+<li>除了头结点之外的结点为表结点</li>
+<li>为运算操作方便，头结点中不存数据</li>
+</ul>
+<p><img src="http://static.chosen1cwp.com/single_link_list1.png" alt="单链表"></p>
+<p>如上图所示：
+head是链表的头指针，所以是指针类型变量
+head内存放的是头结点的地址
+第一个元素结点：head-&gt;next</p>
+<h4 id="基本运算在单链表上的实现">基本运算在单链表上的实现</h4>
+<h5 id="1初始化">1，初始化</h5>
+<p>建立一个空的单链表L,InitiateLinkList(L)，一个空的单链表由：一个头指针和一个头结点构成，假设已定义指针变量t，令t指向一个头结点，并令头结点的next为NULL</p>
+<p>实现算法如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//建立一个空的单链表
+</span><span style="color:#75715e"></span>LinkList <span style="color:#a6e22e">InitiateLinkList</span>( )
+{
+    LinkList head; <span style="color:#75715e">//链表的头指针  指向新创建的头结点
+</span><span style="color:#75715e"></span>    head <span style="color:#f92672">=</span> malloc (<span style="color:#66d9ef">sizeof</span> (Node) ) ; <span style="color:#75715e">//动态构建一结点，它是头结点
+</span><span style="color:#75715e"></span>    head<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> NULL;<span style="color:#75715e">// 一个空链表仅有一个头结点，它的指针域为NULL
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> head;
+}
+</code></pre></div><h5 id="2求表长">2，求表长</h5>
+<p>在单链表存储结构中，线性表的长度等于单链表所含结点的个数（不含头结点）</p>
+<p>求表长步骤：</p>
+<ol>
+<li>令计数器j为0</li>
+<li>令p指向头结点</li>
+<li>当下一个结点不空时，j+1,p指向下一个结点</li>
+<li>j的值即为链表中结点的个数，即是表长</li>
+</ol>
+<p>实现算法如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lengthLinklist</span> (LinkList head)
+{ 
+    Node <span style="color:#f92672">*</span>p;
+    p <span style="color:#f92672">=</span> head; 
+    j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">while</span>( p<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">!=</span> NULL )
+    { 
+        p <span style="color:#f92672">=</span> p<span style="color:#f92672">-&gt;</span>next;
+        j<span style="color:#f92672">++</span>;
+    }
+    <span style="color:#66d9ef">return</span>(j);
+}
+</code></pre></div><h5 id="3读表元素">3，读表元素</h5>
+<p>查找第i个结点的步骤：</p>
+<ol>
+<li>令计数器j为0</li>
+<li>令p指向头结点</li>
+<li>当下一个结点不空时，并且j&lt;i时，j+1,p指向下一个结点</li>
+<li>如果j=i,则p所指结点为要查找的第i个结点,否则，链表中无第i个结点</li>
+</ol>
+<p>实现算法如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">Node <span style="color:#f92672">*</span> <span style="color:#a6e22e">GetlinkList</span>( LinkList head, <span style="color:#66d9ef">int</span> i )
+{ 
+    Node <span style="color:#f92672">*</span>p; <span style="color:#75715e">// 工作指针
+</span><span style="color:#75715e"></span>    p <span style="color:#f92672">=</span> head<span style="color:#f92672">-&gt;</span>next; <span style="color:#75715e">// 初始化时指向首结点
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+    
+    <span style="color:#66d9ef">while</span> ((c<span style="color:#f92672">&lt;</span>i) <span style="color:#f92672">&amp;&amp;</span> (p<span style="color:#f92672">!=</span>NULL) )
+    { 
+        <span style="color:#75715e">// 当未到第i个结点，且 未到尾结点时，继续向后移
+</span><span style="color:#75715e"></span>        p <span style="color:#f92672">=</span> p<span style="color:#f92672">-&gt;</span>next;
+        c<span style="color:#f92672">++</span>;
+    }
+    <span style="color:#66d9ef">if</span>(i<span style="color:#f92672">==</span>c) {
+        <span style="color:#75715e">// 找到第i个结点
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span>(p);
+    }<span style="color:#66d9ef">else</span>{
+        <span style="color:#66d9ef">return</span> NULL;
+    } 
+}
+</code></pre></div><h5 id="4定位">4，定位</h5>
+<p>线性表的定位运算，就是指给定表元素的值，找出这个元素的位置。在单链表的实现中，则是给定一个结点的值，找出这个结点是单链表的第几个结点，又称作：按值查找
+在定位运算中，也需要从头至尾访问链表，直到找到需要的结点，返回其序号，若未找到，返回0</p>
+<p>定位运算步骤</p>
+<ol>
+<li>令p指向头结点</li>
+<li>令i=0</li>
+<li>当下一个结点不空时，p指向下一个结点，同时i的值+1</li>
+<li>直到p指向的结点的值为x，返回i+1的值</li>
+<li>如果找不到结点值为x的话，返回值为0</li>
+</ol>
+<p>实现算法如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//求表head中第一个值等于x的结点的序号，若不存在这种结点，返回结果为0
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">LocateLinklist</span>(LinkList head, DataType x)
+{
+    Node <span style="color:#f92672">*</span>p <span style="color:#f92672">=</span> head; <span style="color:#75715e">//p是工作指针
+</span><span style="color:#75715e"></span>    p <span style="color:#f92672">=</span> p<span style="color:#f92672">-&gt;</span>next; <span style="color:#75715e">//初始时p指向首结点
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">//i代表结点的序号，这里置初值为
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (p <span style="color:#f92672">!=</span> NULL <span style="color:#f92672">&amp;&amp;</span> p<span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">!=</span> x) <span style="color:#75715e">//访问链表
+</span><span style="color:#75715e"></span>    {
+        i<span style="color:#f92672">++</span>;
+        p <span style="color:#f92672">=</span> p<span style="color:#f92672">-&gt;</span>next;
+    }
+    <span style="color:#66d9ef">if</span> (p<span style="color:#f92672">!=</span>NULL) {
+        <span style="color:#66d9ef">return</span> i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+    }<span style="color:#66d9ef">else</span> {
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+    }
+}
+</code></pre></div><h5 id="5插入">5，插入</h5>
+<p>单链表的插入运算是指将给定值为x的元素插入到链表head的第i个结点之前。即插入到ai-1和ai之间</p>
+<p>插入实现步骤</p>
+<ol>
+<li>找到ai-1存储位置p</li>
+<li>生成一个数据域为x的新结点*s</li>
+<li>令结点*p的指针域指向新结点</li>
+<li>新结点的指针域指向结点ai</li>
+</ol>
+<p><img src="http://static.chosen1cwp.com/single_link_list_insert.png" alt="单链表插入"></p>
+<p>实现算法如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">InsertLinklist</span> (LinkList head, DataType x, <span style="color:#66d9ef">int</span> i)
+<span style="color:#75715e">//在表head的第i个数据元素结点之前插入一个以x为值的新结点
+</span><span style="color:#75715e"></span>{
+    Node <span style="color:#f92672">*</span>p,<span style="color:#f92672">*</span>q;
+    <span style="color:#66d9ef">if</span> (i<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>) {
+        q <span style="color:#f92672">=</span> head;
+    }<span style="color:#66d9ef">else</span> {
+        q <span style="color:#f92672">=</span> GetLinklist (head, i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>); <span style="color:#75715e">//找第 i-1个数据元素结点
+</span><span style="color:#75715e"></span>    }
+    <span style="color:#66d9ef">if</span> (q<span style="color:#f92672">==</span>NULL) <span style="color:#75715e">//第i-1个结点不存在
+</span><span style="color:#75715e"></span>    {
+        exit(<span style="color:#e6db74">&#34;找不到插入的位置&#34;</span>);
+    }
+    <span style="color:#66d9ef">else</span>
+    {
+        p <span style="color:#f92672">=</span> malloc(<span style="color:#66d9ef">sizeof</span> (Node) );
+        p<span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">=</span> x; <span style="color:#75715e">//生成新结点
+</span><span style="color:#75715e"></span>        p<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> q<span style="color:#f92672">-&gt;</span>next; <span style="color:#75715e">//新结点链域指向*q的后继结点
+</span><span style="color:#75715e"></span>        q<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> p; <span style="color:#75715e">//修改*q的链域
+</span><span style="color:#75715e"></span>    }
+} 
+</code></pre></div><h5 id="6删除">6，删除</h5>
+<p>单链表的删除是指给定一个值i，将链表中第i个结点从链表中移除，并修改相关结点的指针域，以维持剩余结点的链接关系。
+在单链表中删除第i个结点的基本操作：找到单链表中第i-1个结点，修改其指向后继的指针。</p>
+<p>删除步骤：</p>
+<ol>
+<li>找到ai-1的存储位置p</li>
+<li>令p-&gt;next指向ai的直接后继结点</li>
+<li>释放结点ai的空间，将其归还给&quot;存储池&quot;</li>
+</ol>
+<p>实现算法如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//删除表head的第i个结点
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">DeleteLinklist</span>(LinkList head, <span style="color:#66d9ef">int</span> i)
+{
+    Node <span style="color:#f92672">*</span>q;
+    <span style="color:#75715e">//先找待删结点的直接前驱
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(i<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>) {
+        q <span style="color:#f92672">=</span> head;
+    }<span style="color:#66d9ef">else</span> {
+        q <span style="color:#f92672">=</span> GetLinklist(head, i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>); 
+    }
+    <span style="color:#75715e">//若直接前驱存在且待删结点存在
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(q <span style="color:#f92672">!==</span> NULL <span style="color:#f92672">&amp;&amp;</span> q<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">!=</span> NULL) 
+    {
+        p <span style="color:#f92672">=</span> q<span style="color:#f92672">-&gt;</span>next; <span style="color:#75715e">//p指向待删结点
+</span><span style="color:#75715e"></span>        q<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> p<span style="color:#f92672">-&gt;</span>next; <span style="color:#75715e">//移出待删结点
+</span><span style="color:#75715e"></span>        free(p); <span style="color:#75715e">//释放已移出结点p的空间
+</span><span style="color:#75715e"></span>    }<span style="color:#66d9ef">else</span>{
+        exit (<span style="color:#e6db74">&#34;找不到要删除的结点&#34;</span>);<span style="color:#75715e">//结点不存在 
+</span><span style="color:#75715e"></span>    }
+}
+</code></pre></div><h4 id="其他运算在单链表上的实现">其他运算在单链表上的实现</h4>
+<h5 id="1建表">1，建表</h5>
+<p>建立带头结点的单链表，分三步：</p>
+<ol>
+<li>建立带头结点的空表</li>
+<li>寄哪里一个新的结点</li>
+<li>然后将这个新的结点链接到头结点之后，这个结点既是头结点 ，也是尾结点。重复建立新结点，并将新结点链接到表尾，知道线性表中所有的元素都链接到单链表中。</li>
+</ol>
+<p>方法一
+通过已经实现的插入算法InsertLinkList(LinkList head, int x, int i)来实现依次增大插入位置i，使新的结点链入到链表中。
+时间复杂度：O(n2)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">LinkList <span style="color:#a6e22e">CreateLinkList</span>()
+{
+    <span style="color:#75715e">// 通过调用 InitiateLinkList、InsertLinkList 实现建表算法。
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 这里假定0是输入结束标志
+</span><span style="color:#75715e"></span>    LinkList head;
+    <span style="color:#66d9ef">int</span> x,i;
+    head <span style="color:#f92672">=</span> InitiateLinkList();<span style="color:#75715e">// 初始化建立空表
+</span><span style="color:#75715e"></span>    i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;<span style="color:#75715e">// 设置位置初始值
+</span><span style="color:#75715e"></span>    scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>x);<span style="color:#75715e">//读取输入的第一个数据元素x,x为整型
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 如果输入的数据元素 不是 0 则认为输入未结束，继续插入
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span>(x <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>)
+    {
+        InsertLinkList(head, x, i);<span style="color:#75715e">// 将输入的数据元素插入到head表尾
+</span><span style="color:#75715e"></span>        i<span style="color:#f92672">++</span>;<span style="color:#75715e">// 修改下一次插入的位置
+</span><span style="color:#75715e"></span>        scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>x);<span style="color:#75715e">// 读取下一个数据元素 赋值给x
+</span><span style="color:#75715e"></span>    }
+    <span style="color:#66d9ef">return</span> head;
+}
+</code></pre></div><p>方法二
+方法一每次插入都要从表头开始查找，比较浪费时间。因为每次插入是把新的结点链接到表尾，所以我们可以用一个指针指向尾结点，这样就位下一个新结点指明了插入位置。
+时间复杂度：O(n)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">LinkList <span style="color:#a6e22e">CreateLinkList</span>()
+{
+    <span style="color:#75715e">// 设q是一个LinkList类型的变量，用来指示下一次插入的位置
+</span><span style="color:#75715e"></span>    LinkiList head;
+    Node <span style="color:#f92672">*</span>q,<span style="color:#f92672">*</span>t;
+    <span style="color:#66d9ef">int</span> x;
+    head <span style="color:#f92672">=</span> malloc(<span style="color:#66d9ef">sizeof</span>(Node));<span style="color:#75715e">//生成头结点
+</span><span style="color:#75715e"></span>    q <span style="color:#f92672">=</span> head;<span style="color:#75715e">// 尾巴指针设置初值
+</span><span style="color:#75715e"></span>    sacnf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>x);<span style="color:#75715e">//读入第一个元素
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span>(x <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>)
+    {
+        t <span style="color:#f92672">=</span> malloc(<span style="color:#66d9ef">sizeof</span>(Node));<span style="color:#75715e">// 生成一个新的结点
+</span><span style="color:#75715e"></span>        t<span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">=</span> x;<span style="color:#75715e">// 新结点数据域赋值 x
+</span><span style="color:#75715e"></span>        q<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> t;<span style="color:#75715e">// 新结点t链入链表
+</span><span style="color:#75715e"></span>        q <span style="color:#f92672">=</span> t; <span style="color:#75715e">// 修改尾指针q,指向新的尾结点
+</span><span style="color:#75715e"></span>        scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>x); <span style="color:#75715e">// 读入下一个数据元素
+</span><span style="color:#75715e"></span>    }
+    q<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> NULL;<span style="color:#75715e">//q指向尾指针，尾指针数据设置null，置尾结点标识
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> head;
+}
+</code></pre></div><h5 id="2删除重复元素">2，删除重复元素</h5>
+<p>在线性表中，可能有多个结点的数据元素值是相同的，它们是重复的结点，设计算法删除这些重复的结点，只保留结点序号最小的那个一个结点。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">PurgeLinklist</span>(LinkList head)
+{
+    <span style="color:#75715e">//删除表head中多余的重复结点
+</span><span style="color:#75715e"></span>    Node <span style="color:#f92672">*</span>p,<span style="color:#f92672">*</span>q,<span style="color:#f92672">*</span>r;
+    q <span style="color:#f92672">=</span> head<span style="color:#f92672">-&gt;</span>next; <span style="color:#75715e">//q指示当前检查结点的位置，置其初值指向首结点
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span>(q<span style="color:#f92672">!=</span>NULL) <span style="color:#75715e">//当前检查结点*q不是尾结点时，寻找并删除它的重复结点
+</span><span style="color:#75715e"></span>    {
+        p <span style="color:#f92672">=</span> q; <span style="color:#75715e">//工作指针p指向*q
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span>(p<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">!=</span>NULL) <span style="color:#75715e">//当*p的后继结点存在时,将其数据域与*q数据域比较
+</span><span style="color:#75715e"></span>        { 
+            <span style="color:#66d9ef">if</span> (p<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">==</span> q<span style="color:#f92672">-&gt;</span>data) <span style="color:#75715e">//若*(p-&gt;next)是*q的重复结点
+</span><span style="color:#75715e"></span>            {
+                r<span style="color:#f92672">=</span>p<span style="color:#f92672">-&gt;</span>next; <span style="color:#75715e">//r指向待删结点
+</span><span style="color:#75715e"></span>                p<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> r<span style="color:#f92672">-&gt;</span>next; <span style="color:#75715e">//移出结点* (p-&gt;next)，p-&gt;next指向原来* (p-&gt;next)的后继结点
+</span><span style="color:#75715e"></span>                free (r);
+            }
+            <span style="color:#66d9ef">else</span>
+            {
+                p<span style="color:#f92672">=</span>p<span style="color:#f92672">-&gt;</span>next; <span style="color:#75715e">//否则，让p指向下一个结点
+</span><span style="color:#75715e"></span>            } 
+        }
+        q<span style="color:#f92672">=</span>q<span style="color:#f92672">-&gt;</span>next; <span style="color:#75715e">//更新检查结点
+</span><span style="color:#75715e"></span>    }
+}
+</code></pre></div><h3 id="其他的链表">其他的链表</h3>
+<h4 id="循环链表">循环链表</h4>
+<p>普通链表的终端结点的next值为NULL
+循环链表的终端结点的next指向头结点
+在循环链表中，从任一结点出发能够扫描整个链表</p>
+<h4 id="双向循环链表">双向循环链表</h4>
+<p>在链表中设置两个指针域，一个指向后继结点，一个指向前驱结点，这样的链表叫做双向链表。</p>
+<p>适用于需要经常查找结点的前驱和后驱的场合，查前、后驱的时间复杂度：O(1)</p>
+<h5 id="插入-1">插入</h5>
+<p>双向链表中结点的插入，在p所指结点的后面插入一个新的结点*t，简要步骤：</p>
+<ol>
+<li>t-&gt;prior=p;</li>
+<li>t-&gt;next=p-&gt;next;</li>
+<li>p-&gt;next-&gt;prior=t;</li>
+<li>p-&gt;next=t;</li>
+</ol>
+<h5 id="删除-1">删除</h5>
+<p>双向链表中结点p的删除：</p>
+<ol>
+<li>p-&gt;prior-&gt;next = p-&gt;next; // p前驱结点的后链指向p的后继结点</li>
+<li>p-&gt;next-&gt;prior = p-&gt;prior;// p后继结点的前链指向p的前驱结点</li>
+<li>free(p); // 释放*p空间</li>
+</ol>
+<p>1、2顺序可以颠倒。</p>
+<h3 id="顺序实现与链式实现的比较">顺序实现与链式实现的比较</h3>
+<p>线性表和链表的优缺点：</p>
+<ul>
+<li>单链表的每个结点包括数据域与指针域，指针域需要占用额外空间。</li>
+<li>从整体考虑，顺序表要预分配存储空间，如果预先分配得过大，将造成浪费，若分配得过小，又将发生上溢；单链表不需要预先分配空间，只要内存空间没有耗尽，单链表中的结点个数就没有限制。</li>
+</ul>
+<p>时间性能比较</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">实现类型</th>
+<th style="text-align:right">操作</th>
+<th style="text-align:center">复杂度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">顺序表</td>
+<td style="text-align:right">读表元</td>
+<td style="text-align:center">O(1)</td>
+</tr>
+<tr>
+<td style="text-align:left">顺序表</td>
+<td style="text-align:right">定位（查找x）</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:left">顺序表</td>
+<td style="text-align:right">插入</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:left">顺序表</td>
+<td style="text-align:right">删除</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:left">链表</td>
+<td style="text-align:right">读表元</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:left">链表</td>
+<td style="text-align:right">定位（查找x）</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:left">链表</td>
+<td style="text-align:right">插入</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:left">链表</td>
+<td style="text-align:right">删除</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+</tbody>
+</table>
+<p>线性表的顺序实现（顺序表）和链式实现（链表）各有优缺点，需要根据实际问题具体分析，最终选定比较适合的实现方式。</p>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">chosen1cwp</a> with
+    <a href="https://github.com/chosen1cwp">Github Home</a>.
+</div>
+
+    </div>
+  </body>
+</html>
