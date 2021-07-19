@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>©2020 chosen1cwp.</copyright>
-    <lastBuildDate>Fri, 16 Jul 2021 16:50:15 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jul 2021 16:10:44 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL使用IN查询的结果按照in()里面的顺序排序</title>
+      <link>https://blog.chosen1cwp.com/posts/query_use_in_order/</link>
+      <pubDate>Mon, 19 Jul 2021 16:10:44 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/query_use_in_order/</guid>
+      <description>业务场景 在使用MySQL数据库时，常会用 IN () 关键字来作为查询条件，但查询结果并不是按照IN () 里面的顺序来排序的， 如何实现查询结果按照IN ()</description>
+    </item>
+    
+    <item>
+      <title>不解压tar.gz如何查看文件压缩前大小</title>
+      <link>https://blog.chosen1cwp.com/posts/query_original_size_of_tar/</link>
+      <pubDate>Mon, 19 Jul 2021 15:55:29 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/query_original_size_of_tar/</guid>
+      <description>业务场景回顾 服务器项目系统日志，因为超过磁盘预警大小，预警后就写了脚本来处理 具体处理逻辑： 每月月初，定时任务执行脚本，脚本逻辑是 压缩 上月所有</description>
+    </item>
+    
     <item>
       <title>照片变素描艺术照测试</title>
       <link>https://blog.chosen1cwp.com/posts/photo_to_sketch_art_photo/</link>
