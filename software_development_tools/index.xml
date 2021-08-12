@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software_development_tools on Chosen1cwp&#39;s Blog</title>
+    <link>https://blog.chosen1cwp.com/software_development_tools/</link>
+    <description>Recent content in Software_development_tools on Chosen1cwp&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>©2020 chosen1cwp.</copyright>
+    <lastBuildDate>Tue, 20 Jul 2021 16:16:51 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/software_development_tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chapter1</title>
+      <link>https://blog.chosen1cwp.com/software_development_tools/chapter1/</link>
+      <pubDate>Tue, 20 Jul 2021 16:16:51 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/software_development_tools/chapter1/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
