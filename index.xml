@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>©2020 chosen1cwp.</copyright>
-    <lastBuildDate>Mon, 19 Jul 2021 16:10:44 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Aug 2021 15:57:37 +0800</lastBuildDate><atom:link href="https://blog.chosen1cwp.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我对可转债的认识</title>
+      <link>https://blog.chosen1cwp.com/posts/convertible_bond_desc/</link>
+      <pubDate>Thu, 12 Aug 2021 15:57:37 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/convertible_bond_desc/</guid>
+      <description>关于可转债我们之前写过专门的文章，最近不少朋友遇到了一些新问题，今天进行一个整体的梳理。 可转债对于新手股民朋友来讲，只要对相关知识稍有了解，</description>
+    </item>
+    
+    <item>
+      <title>调整ssl_protocols以便符合更严格的 PCI DSS 合规标准</title>
+      <link>https://blog.chosen1cwp.com/posts/tls1.0_disabled/</link>
+      <pubDate>Thu, 29 Jul 2021 16:01:26 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/posts/tls1.0_disabled/</guid>
+      <description>问题背景 现有人管系统今年因为监管的原因，做了等保3.0测评，测评机构出了测评报告《等保3.0测试报告》，其中一条整改报告如下： Web 服务器支持通</description>
+    </item>
+    
+    <item>
+      <title>Chapter1</title>
+      <link>https://blog.chosen1cwp.com/software_development_tools/chapter1/</link>
+      <pubDate>Tue, 20 Jul 2021 16:16:51 +0800</pubDate>
+      
+      <guid>https://blog.chosen1cwp.com/software_development_tools/chapter1/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>MySQL使用IN查询的结果按照in()里面的顺序排序</title>
       <link>https://blog.chosen1cwp.com/posts/query_use_in_order/</link>
